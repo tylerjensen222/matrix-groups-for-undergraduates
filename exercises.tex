@@ -47,6 +47,38 @@
 %------------------------------------------------------------------------------
 \begin{document}
 
+%--- General notation for fields, sets, and rings you might use frequently:
+\newcommand{\R}{\mathbb{R}}    % Real numbers
+\newcommand{\C}{\mathbb{C}}    % Complex numbers
+\newcommand{\Q}{\mathbb{Q}}    % Rational numbers
+\newcommand{\Z}{\mathbb{Z}}    % Integers
+\newcommand{\N}{\mathbb{N}}    % Natural numbers
+
+%--- General Linear, Special Linear, etc. 
+\newcommand{\GL}[2]{\mathrm{GL}_{#1}\!\bigl(#2\bigr)} % e.g. \GL{n}{\R} -> GL_n(R)
+\newcommand{\SL}[2]{\mathrm{SL}_{#1}\!\bigl(#2\bigr)} % e.g. \SL{n}{\C} -> SL_n(C)
+
+%--- Orthogonal, Special Orthogonal, Symplectic
+\newcommand{\Ogroup}[1]{\mathrm{O}\!\bigl(#1\bigr)}   % O(n)
+\newcommand{\SO}[1]{\mathrm{SO}\!\bigl(#1\bigr)}      % SO(n)
+\newcommand{\Sp}[1]{\mathrm{Sp}\!\bigl(#1\bigr)}      % Sp(n) for symplectic group
+
+%--- Unitary, Special Unitary
+\newcommand{\U}[1]{\mathrm{U}\!\bigl(#1\bigr)}        % U(n)
+\newcommand{\SU}[1]{\mathrm{SU}\!\bigl(#1\bigr)}      % SU(n)
+
+%--- Lie algebras (e.g., \so(n), \sp(n), \su(n), etc.)
+\newcommand{\lie}[1]{\mathfrak{#1}}                    % generic Lie algebra symbol
+\newcommand{\so}[1]{\mathfrak{so}_{#1}}                % so(n)
+\newcommand{\su}[1]{\mathfrak{su}_{#1}}                % su(n)
+\newcommand{\gl}[1]{\mathfrak{gl}_{#1}}                % gl(n)
+\newcommand{\slalg}[1]{\mathfrak{sl}_{#1}}             % sl(n)
+\newcommand{\spalg}[1]{\mathfrak{sp}_{#1}}             % sp(n)
+
+% Optionally define a quick macro for the “big G” or “big g”
+\newcommand{\g}{\mathfrak{g}}                          % generic Lie algebra g
+\newcommand{\G}{\mathrm{G}}                            % generic Lie group G
+
 \frontmatter
 \maketitle
 \tableofcontents
@@ -59,7 +91,7 @@
 \section{Exercises}
 
 \begin{exercise}
-State and prove (or reference) a fundamental fact related to matrix groups.
+Describe a natural 1-to-1 correspondence between elements of $\text{SO}(3)$ and 
 \end{exercise}
 
 \begin{solution}
