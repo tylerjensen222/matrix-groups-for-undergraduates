@@ -47,37 +47,40 @@
 %------------------------------------------------------------------------------
 \begin{document}
 
-%--- General notation for fields, sets, and rings you might use frequently:
-\newcommand{\R}{\mathbb{R}}    % Real numbers
-\newcommand{\C}{\mathbb{C}}    % Complex numbers
-\newcommand{\Q}{\mathbb{Q}}    % Rational numbers
-\newcommand{\Z}{\mathbb{Z}}    % Integers
-\newcommand{\N}{\mathbb{N}}    % Natural numbers
+%------------------------------------------------------------------------------
+%   Common Macros for Matrix Groups and Lie Algebras
+%------------------------------------------------------------------------------
+\newcommand{\R}{\mathbb{R}}        % Real numbers
+\newcommand{\C}{\mathbb{C}}        % Complex numbers
+\newcommand{\Q}{\mathbb{Q}}        % Rational numbers
+\newcommand{\Z}{\mathbb{Z}}        % Integers
+\newcommand{\N}{\mathbb{N}}        % Natural numbers
 
 %--- General Linear, Special Linear, etc. 
-\newcommand{\GL}[2]{\mathrm{GL}_{#1}\!\bigl(#2\bigr)} % e.g. \GL{n}{\R} -> GL_n(R)
-\newcommand{\SL}[2]{\mathrm{SL}_{#1}\!\bigl(#2\bigr)} % e.g. \SL{n}{\C} -> SL_n(C)
+\newcommand{\GL}[2]{\mathrm{GL}_{#1}(#2)}   % e.g. \GL{n}{\R} -> GL_n(\R)
+\newcommand{\SL}[2]{\mathrm{SL}_{#1}(#2)}   % e.g. \SL{n}{\C} -> SL_n(\C)
 
 %--- Orthogonal, Special Orthogonal, Symplectic
-\newcommand{\Ogroup}[1]{\mathrm{O}\!\bigl(#1\bigr)}   % O(n)
-\newcommand{\SO}[1]{\mathrm{SO}\!\bigl(#1\bigr)}      % SO(n)
-\newcommand{\Sp}[1]{\mathrm{Sp}\!\bigl(#1\bigr)}      % Sp(n) for symplectic group
+\newcommand{\Ogroup}[1]{\mathrm{O}(#1)}     % O(n)
+\newcommand{\SO}[1]{\mathrm{SO}(#1)}        % SO(n)
+\newcommand{\Sp}[1]{\mathrm{Sp}(#1)}        % Sp(n) symplectic group
 
 %--- Unitary, Special Unitary
-\newcommand{\U}[1]{\mathrm{U}\!\bigl(#1\bigr)}        % U(n)
-\newcommand{\SU}[1]{\mathrm{SU}\!\bigl(#1\bigr)}      % SU(n)
+\newcommand{\U}[1]{\mathrm{U}(#1)}          % U(n)
+\newcommand{\SU}[1]{\mathrm{SU}(#1)}        % SU(n)
 
-%--- Lie algebras (e.g., \so(n), \sp(n), \su(n), etc.)
-\newcommand{\lie}[1]{\mathfrak{#1}}                    % generic Lie algebra symbol
-\newcommand{\so}[1]{\mathfrak{so}_{#1}}                % so(n)
-\newcommand{\su}[1]{\mathfrak{su}_{#1}}                % su(n)
-\newcommand{\gl}[1]{\mathfrak{gl}_{#1}}                % gl(n)
-\newcommand{\slalg}[1]{\mathfrak{sl}_{#1}}             % sl(n)
-\newcommand{\spalg}[1]{\mathfrak{sp}_{#1}}             % sp(n)
+%--- Lie algebras
+\newcommand{\lie}[1]{\mathfrak{#1}}         % \lie{g} -> \mathfrak{g}
+\newcommand{\so}[1]{\mathfrak{so}_{#1}}     % so(n)
+\newcommand{\sualg}[1]{\mathfrak{su}_{#1}}  % su(n)
+\newcommand{\glalg}[1]{\mathfrak{gl}_{#1}}  % gl(n)
+\newcommand{\slalg}[1]{\mathfrak{sl}_{#1}}  % sl(n)
+\newcommand{\spalg}[1]{\mathfrak{sp}_{#1}}  % sp(n)
 
-% Optionally define a quick macro for the “big G” or “big g”
-\newcommand{\g}{\mathfrak{g}}                          % generic Lie algebra g
-\newcommand{\G}{\mathrm{G}}                            % generic Lie group G
+%--- Generic placeholders for a Lie algebra g and Lie group G
+\newcommand{\g}{\mathfrak{g}}
+\newcommand{\G}{\mathrm{G}}
+
 
 \frontmatter
 \maketitle
@@ -88,14 +91,23 @@
 %==============================================================================
 \chapter{Matrices}
 %==============================================================================
-\section{Exercises}
 
+% Exercise 1.1
 \begin{exercise}
-Describe a natural 1-to-1 correspondence between elements of $\text{SO}(3)$ and 
+Describe a natural 1-to-1 correspondence between elements of $\SO{3}$ and elements of
+
+\[
+T^1S^2 = \{ (p, v) \in \R^3 \times \R^3 : |p| = |v| = 1 \text{ and } p \perp q\}
+\]
+
 \end{exercise}
 
 \begin{solution}
-Placeholder for your solution.
+Using the globe analogy from Question 1.2, fix a point $r$ to be the north pole, 
+and a point $e$ that lies on the equator induced by the choice of $r$, and assert this as the arbitrary `identity'.
+
+Next, given some $A \in \SO{3}$, identify an element in $T^1S^2$ via $A \mapsto (Ar, Av)$, 
+as in first where $A$ maps the north pole $r$, and then how $A$ rotates the globe about the axis induced by $r$ and its antipodal point.
 \end{solution}
 
 %==============================================================================
