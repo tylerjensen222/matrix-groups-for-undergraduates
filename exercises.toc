@@ -1,21 +1,21 @@
 \contentsline {chapter}{\numberline {1}Matrices}{1}{}%
-\contentsline {chapter}{\numberline {2}All matrix groups are real matrix groups}{3}{}%
-\contentsline {section}{\numberline {2.1}Exercises}{3}{}%
-\contentsline {chapter}{\numberline {3}The orthogonal groups}{5}{}%
-\contentsline {section}{\numberline {3.1}Exercises}{5}{}%
-\contentsline {chapter}{\numberline {4}The topology of matrix groups}{7}{}%
-\contentsline {section}{\numberline {4.1}Exercises}{7}{}%
-\contentsline {chapter}{\numberline {5}Lie algebras}{9}{}%
-\contentsline {section}{\numberline {5.1}Exercises}{9}{}%
-\contentsline {chapter}{\numberline {6}Matrix exponentiation}{11}{}%
-\contentsline {section}{\numberline {6.1}Exercises}{11}{}%
-\contentsline {chapter}{\numberline {7}Matrix groups are manifolds}{13}{}%
-\contentsline {section}{\numberline {7.1}Exercises}{13}{}%
-\contentsline {chapter}{\numberline {8}The Lie bracket}{15}{}%
-\contentsline {section}{\numberline {8.1}Exercises}{15}{}%
-\contentsline {chapter}{\numberline {9}Maximal tori}{17}{}%
-\contentsline {section}{\numberline {9.1}Exercises}{17}{}%
-\contentsline {chapter}{\numberline {10}Homogeneous manifolds}{19}{}%
-\contentsline {section}{\numberline {10.1}Exercises}{19}{}%
-\contentsline {chapter}{\numberline {11}Roots}{21}{}%
-\contentsline {section}{\numberline {11.1}Exercises}{21}{}%
+\contentsline {chapter}{\numberline {2}All matrix groups are real matrix groups}{7}{}%
+\contentsline {section}{\numberline {2.1}Exercises}{7}{}%
+\contentsline {chapter}{\numberline {3}The orthogonal groups}{9}{}%
+\contentsline {section}{\numberline {3.1}Exercises}{9}{}%
+\contentsline {chapter}{\numberline {4}The topology of matrix groups}{11}{}%
+\contentsline {section}{\numberline {4.1}Exercises}{11}{}%
+\contentsline {chapter}{\numberline {5}Lie algebras}{13}{}%
+\contentsline {section}{\numberline {5.1}Exercises}{13}{}%
+\contentsline {chapter}{\numberline {6}Matrix exponentiation}{15}{}%
+\contentsline {section}{\numberline {6.1}Exercises}{15}{}%
+\contentsline {chapter}{\numberline {7}Matrix groups are manifolds}{17}{}%
+\contentsline {section}{\numberline {7.1}Exercises}{17}{}%
+\contentsline {chapter}{\numberline {8}The Lie bracket}{19}{}%
+\contentsline {section}{\numberline {8.1}Exercises}{19}{}%
+\contentsline {chapter}{\numberline {9}Maximal tori}{21}{}%
+\contentsline {section}{\numberline {9.1}Exercises}{21}{}%
+\contentsline {chapter}{\numberline {10}Homogeneous manifolds}{23}{}%
+\contentsline {section}{\numberline {10.1}Exercises}{23}{}%
+\contentsline {chapter}{\numberline {11}Roots}{25}{}%
+\contentsline {section}{\numberline {11.1}Exercises}{25}{}%

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.12.25)  26 DEC 2024 17:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.12.25)  31 DEC 2024 14:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -231,33 +231,33 @@ LaTeX Font Info:    ... okay on input line 48.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 86.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 107.
 (/usr/local/texlive/2024/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 86.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 107.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 86.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 107.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 86.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 107.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 86.
+(Font)              <14.4> on input line 107.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 86.
+(Font)              <10> on input line 107.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 86.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 86.
+(Font)              <7> on input line 107.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 107.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 86.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 107.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
@@ -283,65 +283,65 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 Chapter 1.
 [1
 
-{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}] [2
-
-]
+{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}] [2] [3] [4] [5] [6]
 Chapter 2.
-[3] [4
+[7
+
+] [8
 
 ]
 Chapter 3.
-[5] [6
-
-]
-Chapter 4.
-[7] [8
-
-]
-Chapter 5.
 [9] [10
 
 ]
-Chapter 6.
+Chapter 4.
 [11] [12
 
 ]
-Chapter 7.
+Chapter 5.
 [13] [14
 
 ]
-Chapter 8.
+Chapter 6.
 [15] [16
 
 ]
-Chapter 9.
+Chapter 7.
 [17] [18
 
 ]
-Chapter 10.
+Chapter 8.
 [19] [20
 
 ]
+Chapter 9.
+[21] [22
+
+]
+Chapter 10.
+[23] [24
+
+]
 Chapter 11.
-[21] (./exercises.aux)
+[25] (./exercises.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 2838 strings out of 474116
- 41152 string characters out of 5743681
- 1932187 words of memory out of 5000000
- 25171 multiletter control sequences out of 15000+600000
- 620749 words of font info for 81 fonts, out of 8000000 for 9000
+ 2853 strings out of 474116
+ 41369 string characters out of 5743681
+ 1946187 words of memory out of 5000000
+ 25182 multiletter control sequences out of 15000+600000
+ 629577 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,6n,65p,279b,211s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmro12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on exercises.pdf (25 pages, 177456 bytes).
+ 57i,13n,65p,279b,234s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmro12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on exercises.pdf (29 pages, 237720 bytes).
 PDF statistics:
- 137 PDF objects out of 1000 (max. 8388607)
- 90 compressed objects within 1 object stream
+ 174 PDF objects out of 1000 (max. 8388607)
+ 113 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
