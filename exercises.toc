@@ -1,21 +1,77 @@
 \contentsline {chapter}{\numberline {1}Matrices}{1}{}%
-\contentsline {chapter}{\numberline {2}All matrix groups are real matrix groups}{7}{}%
-\contentsline {section}{\numberline {2.1}Exercises}{7}{}%
-\contentsline {chapter}{\numberline {3}The orthogonal groups}{9}{}%
-\contentsline {section}{\numberline {3.1}Exercises}{9}{}%
-\contentsline {chapter}{\numberline {4}The topology of matrix groups}{13}{}%
-\contentsline {section}{\numberline {4.1}Exercises}{13}{}%
-\contentsline {chapter}{\numberline {5}Lie algebras}{15}{}%
-\contentsline {section}{\numberline {5.1}Exercises}{15}{}%
-\contentsline {chapter}{\numberline {6}Matrix exponentiation}{17}{}%
-\contentsline {section}{\numberline {6.1}Exercises}{17}{}%
-\contentsline {chapter}{\numberline {7}Matrix groups are manifolds}{23}{}%
-\contentsline {section}{\numberline {7.1}Exercises}{23}{}%
-\contentsline {chapter}{\numberline {8}The Lie bracket}{25}{}%
-\contentsline {section}{\numberline {8.1}Exercises}{25}{}%
-\contentsline {chapter}{\numberline {9}Maximal tori}{27}{}%
-\contentsline {section}{\numberline {9.1}Exercises}{27}{}%
-\contentsline {chapter}{\numberline {10}Homogeneous manifolds}{29}{}%
-\contentsline {section}{\numberline {10.1}Exercises}{29}{}%
-\contentsline {chapter}{\numberline {11}Roots}{31}{}%
-\contentsline {section}{\numberline {11.1}Exercises}{31}{}%
+\contentsline {subsection}{Exercise 1.1\ [Complete]}{1}{}%
+\contentsline {subsection}{Exercise 1.2\ [Complete]}{1}{}%
+\contentsline {subsection}{Exercise 1.3\ [Complete]}{1}{}%
+\contentsline {subsection}{Exercise 1.4\ [Complete]}{2}{}%
+\contentsline {subsection}{Exercise 1.5\ [Complete]}{2}{}%
+\contentsline {subsection}{Exercise 1.6\ [Complete]}{3}{}%
+\contentsline {subsection}{Exercise 1.7\ [WIP]}{3}{}%
+\contentsline {subsection}{Exercise 1.8\ [Complete]}{3}{}%
+\contentsline {subsection}{Exercise 1.9\ [Complete]}{4}{}%
+\contentsline {subsection}{Exercise 1.10\ [Complete]}{4}{}%
+\contentsline {subsection}{Exercise 1.11\ [TODO]}{5}{}%
+\contentsline {subsection}{Exercise 1.12\ [Complete]}{5}{}%
+\contentsline {subsection}{Exercise 1.13\ [WIP]}{5}{}%
+\contentsline {subsection}{Exercise 1.14\ [TODO]}{5}{}%
+\contentsline {subsection}{Exercise 1.15\ [Complete]}{6}{}%
+\contentsline {subsection}{Exercise 1.16\ [Complete]}{6}{}%
+\contentsline {subsection}{Exercise 1.17\ [Complete]}{6}{}%
+\contentsline {subsection}{Exercise 1.18\ [Complete]}{7}{}%
+\contentsline {chapter}{\numberline {2}All matrix groups are real matrix groups}{9}{}%
+\contentsline {section}{\numberline {2.1}Exercises}{9}{}%
+\contentsline {chapter}{\numberline {3}The orthogonal groups}{11}{}%
+\contentsline {section}{\numberline {3.1}Exercises}{11}{}%
+\contentsline {subsection}{Exercise 3.1\ [Complete]}{11}{}%
+\contentsline {subsection}{Exercise 3.2\ [Complete]}{11}{}%
+\contentsline {subsection}{Exercise 3.3\ [WIP]}{12}{}%
+\contentsline {subsection}{Exercise 3.4\ [Complete]}{13}{}%
+\contentsline {subsection}{Exercise 3.5\ [Complete]}{13}{}%
+\contentsline {subsection}{Exercise 3.6\ [Complete]}{13}{}%
+\contentsline {subsection}{Exercise 3.7\ [WIP]}{14}{}%
+\contentsline {chapter}{\numberline {4}The topology of matrix groups}{15}{}%
+\contentsline {section}{\numberline {4.1}Exercises}{15}{}%
+\contentsline {subsection}{Exercise 4.1\ [TODO]}{15}{}%
+\contentsline {chapter}{\numberline {5}Lie algebras}{17}{}%
+\contentsline {section}{\numberline {5.1}Exercises}{17}{}%
+\contentsline {subsection}{Exercise 5.1\ [TODO]}{17}{}%
+\contentsline {subsection}{Exercise 5.2\ [TODO]}{17}{}%
+\contentsline {subsection}{Exercise 5.3\ [TODO]}{17}{}%
+\contentsline {subsection}{Exercise 5.4\ [TODO]}{17}{}%
+\contentsline {subsection}{Exercise 5.5\ [TODO]}{17}{}%
+\contentsline {subsection}{Exercise 5.6\ [TODO]}{17}{}%
+\contentsline {subsection}{Exercise 5.7\ [TODO]}{17}{}%
+\contentsline {subsection}{Exercise 5.8\ [TODO]}{17}{}%
+\contentsline {subsection}{Exercise 5.9\ [TODO]}{17}{}%
+\contentsline {subsection}{Exercise 5.10\ [TODO]}{17}{}%
+\contentsline {subsection}{Exercise 5.11\ [TODO]}{17}{}%
+\contentsline {subsection}{Exercise 5.12\ [TODO]}{17}{}%
+\contentsline {subsection}{Exercise 5.13\ [TODO]}{17}{}%
+\contentsline {subsection}{Exercise 5.14\ [TODO]}{17}{}%
+\contentsline {subsection}{Exercise 5.15\ [TODO]}{17}{}%
+\contentsline {subsection}{Exercise 5.16\ [TODO]}{17}{}%
+\contentsline {chapter}{\numberline {6}Matrix exponentiation}{19}{}%
+\contentsline {section}{\numberline {6.1}Exercises}{19}{}%
+\contentsline {subsection}{Exercise 6.1\ [WIP]}{19}{}%
+\contentsline {subsection}{Exercise 6.2\ [Complete]}{19}{}%
+\contentsline {subsection}{Exercise 6.3\ [Complete]}{20}{}%
+\contentsline {subsection}{Exercise 6.4\ [WIP]}{21}{}%
+\contentsline {subsection}{Exercise 6.5\ [Complete]}{21}{}%
+\contentsline {subsection}{Exercise 6.6\ [WIP]}{22}{}%
+\contentsline {subsection}{Exercise 6.7\ [WIP]}{22}{}%
+\contentsline {subsection}{Exercise 6.8\ [WIP]}{23}{}%
+\contentsline {subsection}{Exercise 6.9\ [WIP]}{23}{}%
+\contentsline {subsection}{Exercise 6.10\ [TODO]}{24}{}%
+\contentsline {subsection}{Exercise 6.11\ [TODO]}{24}{}%
+\contentsline {subsection}{Exercise 6.12\ [TODO]}{24}{}%
+\contentsline {subsection}{Exercise 6.13\ [TODO]}{24}{}%
+\contentsline {subsection}{Exercise 6.14\ [TODO]}{24}{}%
+\contentsline {chapter}{\numberline {7}Matrix groups are manifolds}{25}{}%
+\contentsline {section}{\numberline {7.1}Exercises}{25}{}%
+\contentsline {chapter}{\numberline {8}The Lie bracket}{27}{}%
+\contentsline {section}{\numberline {8.1}Exercises}{27}{}%
+\contentsline {chapter}{\numberline {9}Maximal tori}{29}{}%
+\contentsline {section}{\numberline {9.1}Exercises}{29}{}%
+\contentsline {chapter}{\numberline {10}Homogeneous manifolds}{31}{}%
+\contentsline {section}{\numberline {10.1}Exercises}{31}{}%
+\contentsline {chapter}{\numberline {11}Roots}{33}{}%
+\contentsline {section}{\numberline {11.1}Exercises}{33}{}%

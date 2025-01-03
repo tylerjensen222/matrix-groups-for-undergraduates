@@ -16,6 +16,40 @@
 \usepackage{geometry}
 \geometry{margin=1in}
 
+\usepackage{xparse}
+\usepackage{xcolor}
+
+% Define the 'exercise' environment with an optional status argument
+\NewDocumentEnvironment{taggedexercise}{O{}}
+{%
+  % Increment the 'exercise' theorem counter manually
+  \refstepcounter{exercise}%
+  
+  % Print the heading in the document with the optional status
+  \par\noindent
+  \textbf{Exercise \theexercise}%
+  \if\relax\detokenize{#1}\relax
+    % If no optional argument provided, do nothing
+  \else
+    \textbf{\ [#1]}%
+  \fi
+  \quad
+
+  % Also add it to the ToC at the subsection level (you can adjust this to 'section' or 'subsubsection')
+  % If you'd rather keep them out of the main ToC and make a separate "List of Exercises," 
+  % you can adapt this approach using a custom list environment or the 'thmtools' package.
+  \addcontentsline{toc}{subsection}{%
+    Exercise \theexercise
+    \if\relax\detokenize{#1}\relax
+    \else
+      \ [#1]%
+    \fi
+  }
+}{%
+  \par
+}
+
+
 %------------------------------------------------------------------------------
 %   Theorem-Like Environments
 %------------------------------------------------------------------------------
@@ -113,14 +147,14 @@
 %==============================================================================
 
 % Exercise 1.1
-\begin{exercise}
+\begin{taggedexercise}[Complete]
 Describe a natural 1-to-1 correspondence between elements of $\SO{3}$ and elements of
 
 \[
 T^1S^2 = \{ (p, v) \in \R^3 \times \R^3 : |p| = |v| = 1 \text{ and } p \perp q\}
 \]
 
-\end{exercise}
+\end{taggedexercise}
 
 \begin{solution}
 Using the globe analogy from Question 1.2, fix a point $r$ to be the north pole, 
@@ -131,12 +165,12 @@ as in first where $A$ maps the north pole $r$, and then how $A$ rotates the glob
 \end{solution}
 
 % Exercise 1.2
-\begin{exercise}
+\begin{taggedexercise}[Complete]
   Prove equation 1.3:
   \[
   (A \cdot B)^T = B^T \cdot A^T
   \]
-\end{exercise}
+\end{taggedexercise}
 
 \begin{solution}
   First, 
@@ -161,12 +195,12 @@ hence the above proof does not work when $\K = \HH$.
 
 
 % Exercise 1.3
-\begin{exercise}
+\begin{taggedexercise}[Complete]
   Prove equation 1.4:
 \[
 \tr{A \cdot B} = \tr{B \cdot A}
 \]
-\end{exercise}
+\end{taggedexercise}
 
 \begin{solution}
   First,
@@ -190,9 +224,9 @@ Note that the `careful reindexing and resumming process' implies $\tr{}$ is inva
 \]
 
 % Exercise 1.4
-\begin{exercise}
+\begin{taggedexercise}[Complete]
   Let $A, B \in M_n{\K}$. Prove that if $A \cdot B = I$ then $B \cdot A = I$.
-\end{exercise}
+\end{taggedexercise}
 
 \begin{solution}
   Note that
@@ -203,7 +237,7 @@ Note that the `careful reindexing and resumming process' implies $\tr{}$ is inva
 \end{solution}
 
 % Exercise 1.5
-\begin{exercise}
+\begin{taggedexercise}[Complete]
   Suppose that the determinant of $A \in M_n(\HH)$ were defined as in Equation 1.5. Show for 
 \[
   A = \boldmattwo{i}{j}{i}{j} \in M_n(\HH)
@@ -214,7 +248,7 @@ that $\det(A) \neq 0$ but
 R_A: H^2 \to H^2
 \]
 is not invertible.
-\end{exercise}
+\end{taggedexercise}
 
 \begin{solution}
   Given the definition from Equation 1.5:
@@ -236,9 +270,9 @@ is not invertible.
 \end{solution}
 
 % Exercise 1.6
-\begin{exercise}
+\begin{taggedexercise}[Complete]
   Find $B \in M_2(\R)$ such that $R_B : \R^2 \to \R^2$ is a counter-clockwise rotation through an angle $\theta$.
-\end{exercise}
+\end{taggedexercise}
 
 \begin{solution}
   Note that we can `represent' both $1$ and $i$ in $M_2(\R)$ via
@@ -271,9 +305,9 @@ is not invertible.
 
 %TODO: prove the statement in the solution
 % Exercise 1.7
-\begin{exercise}
+\begin{taggedexercise}[WIP]
   Describe all elements $A \in \GL{n}{\R}$ with the property $AB=BA$ for all $B \in \GL{n}{\R}$.
-\end{exercise}
+\end{taggedexercise}
 
 \begin{solution}
   Matrices $A$ that commute with all matrices in $\GL{n}{\R}$ are scalar multiples of the identity
@@ -284,11 +318,11 @@ is not invertible.
 \end{solution}
 
 % Exercise 1.8
-\begin{exercise}
+\begin{taggedexercise}[Complete]
   Let $\SL{2}{\Z}$ denote 2 by 2 matrices with integer entries and determinant $1$.
   Prove that $\SL{2}{\Z}$ is a subgroup of $\GL{n}{\Z}$. 
   Is $SL_n(\Z)$ a subgroup of $\GL{n}{\R}$ in general?
-\end{exercise}
+\end{taggedexercise}
 
 \begin{solution}
   Fixing $A, B \in \SL{2}{\Z}$, its clear that $A \cdot B$ must have all integer entries.
@@ -314,9 +348,9 @@ This factor is the same for any $n$, so $\SL{n}{\Z}$ is always a subgroup of $\G
 
 
 % Exercise 1.9
-\begin{exercise}
+\begin{taggedexercise}[Complete]
   Describe the block matrix blah blabh blabhj TODO write this out
-\end{exercise}
+\end{taggedexercise}
 \begin{solution}
   Suppose $A$ and $B$ are block matrices in $M_n(\K)$, given by
   \[
@@ -348,9 +382,9 @@ Which can be applied to the above question to derive a simple answer.
 \end{solution}
 
 % Exercise 1.10
-\begin{exercise}
+\begin{taggedexercise}[Complete]
   If $G_1 \subset \GL{n_1}{\K}$ and $G_2 \subset \GL{n_2}{\K}$ are subgroups, describe a subgroup of $\GL{n_1 + n_2}{\K}$ isomorphic to $G_1 \times G_2$.
-\end{exercise}
+\end{taggedexercise}
 \begin{solution}
   Define a map 
   \[
@@ -383,15 +417,15 @@ Which can be applied to the above question to derive a simple answer.
 
 % TODO
 % Exercise 1.11
-\begin{exercise}
+\begin{taggedexercise}[TODO]
   
-\end{exercise}
+\end{taggedexercise}
 
 % Exercise 1.12
-\begin{exercise}
+\begin{taggedexercise}[Complete]
   Show that for purely imaginary $q_1, q_2 \in \HH$, $-\Re (q_1 \cdot q_2)$ is the vector dot product in $\R^3 = \text{span}(\mathbf{i},
   \mathbf{j},\mathbf{k})$ and $\Im(q_1 \cdot q_2)$ is the vector cross-product.
-\end{exercise}
+\end{taggedexercise}
 
 \begin{solution}
   First,
@@ -414,9 +448,9 @@ Which can be applied to the above question to derive a simple answer.
 
 % TODO
 % Exercise 1.13
-\begin{exercise}
+\begin{taggedexercise}[WIP]
   Prove that non-real elements $q_1, q_2 \in \HH$ commute if and only if their imaginary parts are parallel; that is, $\Im(q_1) = \lambda \cdot \Im(q_2)$ for some $\lambda \in \R$.
-\end{exercise}
+\end{taggedexercise}
 
 \begin{solution}
   $(\implies)$ Let $\Im(q_1) = \lambda \cdot \Im(q_2)$ for some $\lambda \in \R$, so that
@@ -449,14 +483,14 @@ Which can be applied to the above question to derive a simple answer.
 
 % TODO
 % Exercise 1.14
-\begin{exercise}
+\begin{taggedexercise}[TODO]
   Charachterize the pairs $q_1, q_2 \in \HH$ which anti-commute, that is $q_1q_2 = -q_2q_1$.
-\end{exercise}
+\end{taggedexercise}
 
 % Exercise 1.15
-\begin{exercise}
+\begin{taggedexercise}[Complete]
   If $q \in \HH$ satisfies $q\mathbf{i} = \mathbf{i}q$, prove that $q \in \C$.
-\end{exercise}
+\end{taggedexercise}
 \begin{solution}
   Let $q = a + b\mathbf{i} + c\mathbf{j} + d\mathbf{k}$. Then,
   \[
@@ -478,9 +512,9 @@ Which can be applied to the above question to derive a simple answer.
 \end{solution}
 
 % Exercise 1.16
-\begin{exercise}
+\begin{taggedexercise}[Complete]
   Prove that complex multiplication in $\C \approxeq \R^2$ does not extend to a multiplication operation on $\R^3$ that makes $\R^3$ into a real division algebra.
-\end{exercise}
+\end{taggedexercise}
 
 \begin{solution}
   Assume such an extension exists. 
@@ -514,9 +548,9 @@ Which can be applied to the above question to derive a simple answer.
 \end{solution}
 
 % Exercise 1.17
-\begin{exercise}
+\begin{taggedexercise}[Complete]
   Describe a subgroup of $\GL{n+1}{\R}$ that is isomorphic to $\R^n$ under vector-addition.
-\end{exercise}
+\end{taggedexercise}
 
 \begin{solution}
   Consider the matrices of the form 
@@ -534,9 +568,9 @@ Which can be applied to the above question to derive a simple answer.
 \end{solution}
 
 % Exercise 1.18
-\begin{exercise}
+\begin{taggedexercise}[Complete]
   If $\lambda \in \HH$ commutes with every element of $\HH$, prove that $\lambda \in \R$.
-\end{exercise}
+\end{taggedexercise}
 
 \begin{solution}
   Let $\lambda$ have the property that $\lambda \cdot w = w \cdot \lambda$ for all $w \in \HH$.
@@ -561,12 +595,12 @@ Which can be applied to the above question to derive a simple answer.
 \section{Exercises}
 
 % Exercise 3.1
-\begin{exercise}
+\begin{taggedexercise}[Complete]
   Prove part (4) of Proposition 3.3:
   \[
   \overline{\langle X, Y \rangle} = \langle Y, X \rangle
   \]
-\end{exercise}
+\end{taggedexercise}
 \begin{solution}
   \[
   \begin{aligned}
@@ -582,7 +616,7 @@ Which can be applied to the above question to derive a simple answer.
 
 
 % Exercise 3.2
-\begin{exercise}
+\begin{taggedexercise}[Complete]
   Prove Equations 3.5 and 3.6:
   \[
     (3.5) :  \langle X, Y \rangle_\C = \langle f(X), f(Y) \rangle_\R + \mathbf{i} \langle f(X), f(\mathbf{i}Y) \rangle_\R
@@ -598,7 +632,7 @@ Which can be applied to the above question to derive a simple answer.
   \[
   f(a_1 + b_1\mathbf{i}, \dots , a_n+b_n\mathbf{i}) := (a_1, b_1, \dots, a_n, b_n).
   \]
-\end{exercise}
+\end{taggedexercise}
 
 \begin{solution} First, for Equation 3.5,
   \[
@@ -636,9 +670,9 @@ Which can be applied to the above question to derive a simple answer.
 
 % TODO
 % Exercise 3.3
-\begin{exercise}
+\begin{taggedexercise}[WIP]
   Prove Proposition 3.5, that is $\{X_1, \dots X_n\} \in \C^n$ is an orthonormal basis if and only if $\{f(X_1), f(\mathbf{i}X_1), \dots ,f(X_n), f(\mathbf{i}X_n)\}$ is an othonormal basis of $\R^{2n}$. 
-\end{exercise}
+\end{taggedexercise}
 
 \begin{solution}
   ($\implies$) Let $\{Y_1, \dots Y_{2n}\} = \{f(X_1), f(\mathbf{i}X_1), \dots ,f(X_n), f(\mathbf{i}X_n)\}$ be an orthonorml basis of $\R^{2n}$.
@@ -665,9 +699,9 @@ Which can be applied to the above question to derive a simple answer.
 
 
 % Exercise 3.4
-\begin{exercise}
+\begin{taggedexercise}[Complete]
   Prove Proposition 3.18, that is, for any $X \subset \R^n$, $\text{Symm}^+(X) \subset \text{Symm}(X)$ is a subgroup with index $1$ or $2$.
-\end{exercise}
+\end{taggedexercise}
 
 \begin{solution}
   First, to show $\text{Symm}^+(X)$ is a subgroup, let $A, B \in \text{Symm}^+(X)$. 
@@ -684,9 +718,9 @@ Which can be applied to the above question to derive a simple answer.
 \end{solution}
 
 % Exercise 3.5
-\begin{exercise}
+\begin{taggedexercise}[Complete]
   Let $A \in \GL{n}{\K}$. Prove that $A \in \text{O}_n(\K)$ if and only if the columns of $A$ are an orthonormal basis of $\K^n$.
-\end{exercise}
+\end{taggedexercise}
 
 \begin{solution}
   ($\implies$) Let the columns of $A$ form an orthonormal basis $\{ v_1, \dots, v_n \}$ of $\K^n$.
@@ -703,7 +737,7 @@ Which can be applied to the above question to derive a simple answer.
   \]
   where $A_{ki}$ is the $k$th component of $v_i$, hence
   \[
-    (A^*A)_{ij} = \langle v_i, v_j \rangle = \delta_{ij} \implies A*A = I
+    (A^*A)_{ij} = \langle v_i, v_j \rangle = \delta_{ij} \implies A^*A = I
   \] 
 
   ($\impliedby$) Fix some $A \in \text{O}_n(\K)$ with columns $\{ v_1, \dots, v_n \}$.
@@ -722,13 +756,12 @@ Which can be applied to the above question to derive a simple answer.
 \end{solution}
 
 % Exercise 3.6
-\begin{exercise}
-  $\newline$
+\begin{taggedexercise}[Complete]
   \begin{enumerate}
     \item Show that for every $A \in \Ogroup{2} - \SO{2}$, $R_A: \R^2 \to \R^2$ is a flip about some line through the origin. How is this line determined by the angle of $A$?
     \item Let $B = \mattwo{\cos \theta}{\sin \theta}{-\sin\theta}{\cos\theta} \in \SO{2}$. Assume $\theta$ is not an integer multiple of $\pi$. Prove that $B$ does not commute with any $A \in \Ogroup{2} - \SO{2}$.
   \end{enumerate}
-\end{exercise}
+\end{taggedexercise}
 
 \begin{solution}
   (1). First, note that given some $X = (x_1, x_2) \in \R^2$,
@@ -763,9 +796,9 @@ Which can be applied to the above question to derive a simple answer.
 
 % TODO
 % Exercise 3.7
-\begin{exercise}
+\begin{taggedexercise}[WIP]
   Describe the product of any two elements in $O(2)$ in terms of their angles.
-\end{exercise}
+\end{taggedexercise}
 
 \begin{solution}
   Let $A, B \in \SO{2}$ and $C, D \in O(2) - \SO{2}$.
@@ -788,10 +821,10 @@ Which can be applied to the above question to derive a simple answer.
 \section{Exercises}
 
 %TODO
-% Exercise 
-\begin{exercise}
+% Exercise 4.1
+\begin{taggedexercise}[TODO]
 Another exercise goes here.
-\end{exercise}
+\end{taggedexercise}
 
 \begin{solution}
 Placeholder for your solution.
@@ -802,13 +835,101 @@ Placeholder for your solution.
 %==============================================================================
 \section{Exercises}
 
-\begin{exercise}
-Another exercise goes here.
-\end{exercise}
+%TODO
+% Exercise 5.1
+\begin{taggedexercise}[TODO]
 
-\begin{solution}
-Placeholder for your solution.
-\end{solution}
+\end{taggedexercise}
+
+%TODO
+% Exercise 5.2
+\begin{taggedexercise}[TODO]
+
+\end{taggedexercise}
+
+%TODO
+% Exercise 5.3
+\begin{taggedexercise}[TODO]
+
+\end{taggedexercise}
+
+%TODO
+% Exercise 5.4
+\begin{taggedexercise}[TODO]
+
+\end{taggedexercise}
+
+%TODO
+% Exercise 5.5
+\begin{taggedexercise}[TODO]
+
+\end{taggedexercise}
+
+%TODO
+% Exercise 5.6
+\begin{taggedexercise}[TODO]
+
+\end{taggedexercise}
+
+%TODO
+% Exercise 5.7
+\begin{taggedexercise}[TODO]
+
+\end{taggedexercise}
+
+%TODO
+% Exercise 5.8
+\begin{taggedexercise}[TODO]
+
+\end{taggedexercise}
+
+%TODO
+% Exercise 5.9
+\begin{taggedexercise}[TODO]
+
+\end{taggedexercise}
+
+%TODO
+% Exercise 5.10
+\begin{taggedexercise}[TODO]
+
+\end{taggedexercise}
+
+%TODO
+% Exercise 5.11
+\begin{taggedexercise}[TODO]
+
+\end{taggedexercise}
+
+%TODO
+% Exercise 5.12
+\begin{taggedexercise}[TODO]
+
+\end{taggedexercise}
+
+%TODO
+% Exercise 5.13
+\begin{taggedexercise}[TODO]
+
+\end{taggedexercise}
+
+%TODO
+% Exercise 5.14
+\begin{taggedexercise}[TODO]
+
+\end{taggedexercise}
+
+%TODO
+% Exercise 5.15
+\begin{taggedexercise}[TODO]
+
+\end{taggedexercise}
+
+%TODO
+% Exercise 5.16
+\begin{taggedexercise}[TODO]
+
+\end{taggedexercise}
 
 %==============================================================================
 \chapter{Matrix exponentiation}
@@ -817,13 +938,13 @@ Placeholder for your solution.
 
 % TODO
 % Exercise 6.1
-\begin{exercise}
+\begin{taggedexercise}[WIP]
 Prove Proposition 6.5, that is, suppose that $\sum A_l$ and $\sum B_l$ converge, at least one absolutely.
 Let $C_l = \sum_{k=0}^l A_kB_{l-k}$. Prove that
 \[
 \sum C_l = (\sum A_l)(\sum B_l)
 \]
-\end{exercise}
+\end{taggedexercise}
 
 \begin{solution}
 \[
@@ -835,9 +956,9 @@ Let $C_l = \sum_{k=0}^l A_kB_{l-k}$. Prove that
 \end{solution}
 
 % Exercise 6.2
-\begin{exercise}
+\begin{taggedexercise}[Complete]
   Prove that $(e^A)^* = e^{A^*}$ for all $A \in M_n(\K)$.
-\end{exercise}
+\end{taggedexercise}
 
 \begin{solution}
   Using the fact that $(XY)^* = Y^*X^*$ and $(X + Y)^* = X^* + Y^*$,
@@ -853,14 +974,13 @@ Let $C_l = \sum_{k=0}^l A_kB_{l-k}$. Prove that
   \]
 \end{solution}
 
-% Exercise 6.4
-\begin{exercise}
-  $\newline$
+% Exercise 6.3
+\begin{taggedexercise}[Complete]
   \begin{enumerate}
     \item Let $A = \text{diag}(a_1, \dots, a_n) \in M_n(\R)$. Calculate $e^A$ and give a simple prove that $\det(e^A) = e^{\text{trace}(A)}$ when $A$ is diagonal.
     \item Give a simple proof that $\det(e^A) = e^{\text{trace}(A)}$ when $A$ is conjugate to a diagonal matrix.
   \end{enumerate}
-\end{exercise}
+\end{taggedexercise}
 
 \begin{solution}
   (1). Let $A = \text{diag}(a_1, \dots, a_n) \in M_n(\R)$.
@@ -908,11 +1028,12 @@ Let $C_l = \sum_{k=0}^l A_kB_{l-k}$. Prove that
   where the last equality holds since similar matrices have the same trace. 
 \end{solution}
 
-% Exercise 6.5
-\begin{exercise}
+% Exercise 6.4
+\begin{taggedexercise}[WIP]
   Let $A = \mattwo{0}{1}{-1}{0}$. Compute $e^{tA}$ for arbitrary $t \in \R$.
-\end{exercise}
+\end{taggedexercise}
 
+% Needs fix! See indexing of factorial terms
 \begin{solution}
   First, consider the following table:
 
@@ -947,22 +1068,23 @@ Let $C_l = \sum_{k=0}^l A_kB_{l-k}$. Prove that
   Noticing that as $t \to 0$ we have $e^{tA} \to I$ is a good sanity check!
 \end{solution}
 
-% Exercise 6.6
-\begin{exercise}
+% Exercise 6.5
+\begin{taggedexercise}[Complete]
   Can a one-parameter group ever cross itself?
-\end{exercise}
+\end{taggedexercise}
 
 \begin{solution}
   No - a one-parameter group is differentiable, hence any singularity would contradict its differentiability.
   Alternatively, by Proposition 6.17, every one-parameter group is described by $\gamma(t) = e^{tA}$ for some $A \in gl_n(\K)$, and $e^{tA}$ is injective.
 \end{solution}
 
-% Exercise 6.7
-\begin{exercise}
+% Exercise 6.6
+\begin{taggedexercise}[WIP]
   Describe all one-parameter groups of $\GL{1}{\C}$.
   Draw several in the x-y plane.
-\end{exercise}
+\end{taggedexercise}
 
+% Need to draw some with tikz
 \begin{solution}
   Let $z = a + b\mathbf{i} \in \GL{1}{\C}$.
   Then, any one-parameter group has the form
@@ -979,11 +1101,12 @@ Let $C_l = \sum_{k=0}^l A_kB_{l-k}$. Prove that
 \end{solution}
 
 % Exercise 6.7
-\begin{exercise}
+\begin{taggedexercise}[WIP]
   Let $G = \left\{ \mattwo{x}{y}{0}{1} \in \GL{2}{\R} : x > 0 \right\}$.
   Describe the one-parameter groups in $G$, and draw several on the $xy-$plane.
-\end{exercise}
+\end{taggedexercise}
 
+% Need to draw with some tikz
 \begin{solution}
   First, note that given $A \in G$,
   \[
@@ -1011,9 +1134,9 @@ Let $C_l = \sum_{k=0}^l A_kB_{l-k}$. Prove that
 
 % TODO
 % Exercise 6.8
-\begin{exercise}
+\begin{taggedexercise}[WIP]
   Visually describe the path $\gamma(t) = e^{t\mathbf{j}}$ in $Sp(1) \approxeq S^3$.
-\end{exercise}
+\end{taggedexercise}
 
 \begin{solution}
   First, note that
@@ -1042,11 +1165,12 @@ Let $C_l = \sum_{k=0}^l A_kB_{l-k}$. Prove that
 \end{solution}
 
 % Exercise 6.9
-\begin{exercise}
+\begin{taggedexercise}[WIP]
   Let $A = \mattwo{a}{b}{-b}{a} \in gl_n{\R}$.
   Compute $e^A$.
-\end{exercise}
+\end{taggedexercise}
 
+%To fix! Exercise 6.4 is used here, and needs to be fixed + updated here
 \begin{solution}
   First, note that
   \[
@@ -1068,9 +1192,33 @@ Let $C_l = \sum_{k=0}^l A_kB_{l-k}$. Prove that
 
 % TODO
 % Exercise 6.10
-\begin{exercise}
+\begin{taggedexercise}[TODO]
   Repeat the previous problem with $A = \mattwo{a}{b}{b}{a}$
-\end{exercise}
+\end{taggedexercise}
+
+% TODO
+% Exercise 6.11
+\begin{taggedexercise}[TODO]
+  
+\end{taggedexercise}
+
+% TODO
+% Exercise 6.12
+\begin{taggedexercise}[TODO]
+  
+\end{taggedexercise}
+
+% TODO
+% Exercise 6.13
+\begin{taggedexercise}[TODO]
+  
+\end{taggedexercise}
+
+% TODO
+% Exercise 6.14
+\begin{taggedexercise}[TODO]
+  
+\end{taggedexercise}
 
 %==============================================================================
 \chapter{Matrix groups are manifolds}
