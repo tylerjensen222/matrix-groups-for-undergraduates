@@ -12,6 +12,11 @@
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
 
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usetikzlibrary{calc,3d}
+
+
 \usepackage{amsmath,amssymb,amsthm}
 \usepackage{geometry}
 \geometry{margin=1in}
@@ -813,6 +818,268 @@ Which can be applied to the above question to derive a simple answer.
   \]
 \end{solution}
 
+%TODO
+% Exercise 3.8
+\begin{taggedexercise}[TODO]
+
+\end{taggedexercise}
+
+%TODO
+% Exercise 3.9
+\begin{taggedexercise}[TODO]
+
+\end{taggedexercise}
+
+%TODO
+% Exercise 3.10
+\begin{taggedexercise}[TODO]
+
+\end{taggedexercise}
+
+%TODO
+% Exercise 3.11
+\begin{taggedexercise}[TODO]
+
+\end{taggedexercise}
+
+%TODO
+% Exercise 3.12
+\begin{taggedexercise}[TODO]
+
+\end{taggedexercise}
+
+%TODO
+% Exercise 3.14
+\begin{taggedexercise}[TODO]
+
+\end{taggedexercise}
+
+%TODO
+% Exercise 3.15
+\begin{taggedexercise}[TODO]
+
+\end{taggedexercise}
+
+%TODO
+% Exercise 3.15
+\begin{taggedexercise}[TODO]
+  Prove that the symmetries of the tetrahedron form the group $S_4$ and the proper symmetries form the group $A_4$.
+\end{taggedexercise}
+\begin{solution}
+
+\end{solution}
+
+% Exercise 3.16
+\begin{taggedexercise}[Complete]
+  Think of $\Sp{1}$ as the group of unit length quarternions, that is $\Sp{1} = \{ q \in \HH : |q| = 1 \}$.
+  \begin{enumerate}
+    \item Show that the conjugation map $C_q : \HH \to \HH$ given by $C_q(v) := q v \bar{q}$ is an orthogonal linear transformation. Thus, w.r.t the natural basis $\{1, \mathbf{i}, \mathbf{j}, \mathbf{k}\}$, $C_q$ can be regaurded as an element of $\Ogroup{4}$.
+    \item For every $q \in \Sp{1}$, show that $C_q(1) = 1$ and therefore that $C_q$ sends $\text{span}\{\mathbf{i}, \mathbf{j}, \mathbf{k}\}$ to itself. Conclude that the restriction $C_q \big|_{\Im(\HH)}$ can be regaurded as an element of $\Ogroup{3}$.
+    \item Define $\varphi : \Sp{1} \to \Ogroup{3}$ given by $\varphi(q) := C_q \big|_{\Im(\HH)}$. Verify $\varphi$ is a group homomorphism.
+    \item Verify that the kernel of $\varphi$ is $\{1, -1\}$ and therefore $\varphi$ is two-to-one.
+  \end{enumerate}
+\end{taggedexercise}
+
+\begin{solution}
+  (1). To show $C_q$ is linear, let $v, w \in \HH$, then
+  \[\begin{aligned}
+    C_q(v + w) &= q(v+w)\bar{q} \\
+               &= q(v\bar{q} + w\bar{q}) \\
+               &= qv\bar{q} + qw\bar{q} \\
+               &= c_q(v) + C_q(w).
+  \end{aligned}\]
+  Next, fix $\lambda \in \R$. Then,
+  \[
+  \begin{aligned}
+    C_q(\lambda v) &= q(\lambda v)\bar{q} \\
+                   &= \lambda(qv\bar{q}) \\
+                   &= \lambda C_q(v)
+  \end{aligned}
+  \]    
+  hence $C_q$ is a linear transformation.
+  To show $C_q$ is orthogonal, note that
+  \[
+  \begin{aligned}
+    \langle C_q(v), C_q(w) \rangle &= \langle qv\bar{q}, qw\bar{q} \rangle \\
+                                   &= \Re(\overline{qv\bar{q}} \cdot qw\bar{q}) \\
+                                   &= \Re(\overline{v\bar{q}}\bar{q} \cdot qw\bar{q}) \\
+                                   &= \Re(\overline{v\bar{q}}(\bar{q}q)w\bar{q}) \\
+                                   &= \Re(\overline{v\bar{q}}w\bar{q}) \\
+                                   &= \Re(\overline{v\bar{q}}w\bar{q}) \\
+                                   &= \Re(q\bar{v}w \bar{q}) \\
+                                   &\stackrel{*}{=} \Re(\bar{v}w) \\
+                                   &= \langle v, w\rangle 
+  \end{aligned}
+  \]
+  where the $\stackrel{*}{=}$ step can be verified using
+  \[\Re(qx \bar{q})= \frac{1}{2} q(x + \bar{x})\bar{q} = \frac{1}{2}\cdot 2\Re(x) \cdot q\bar{q} = \Re(x)\] 
+  Therefore, $C_q$ can be regaurded as an element of $\Ogroup{4}$ by identifying it with a matrix $A \in \Ogroup{4}$ so that the following commutes:
+  \[\begin{tikzcd}
+    {\{1, \mathbf{i}, \mathbf{j}, \mathbf{k}\}} &&& \HH \\
+    \\
+    \\
+    {\{e_1, e_2, e_3, e_4\}} &&& {\R^4}
+    \arrow["{C_q}", from=1-1, to=1-4]
+    \arrow["\pi"', from=1-1, to=4-1]
+    \arrow["{A}"', from=4-1, to=4-4]
+    \arrow["\rho", from=1-4, to=4-4]
+  \end{tikzcd}\]
+  where $\pi$ and $\rho$ are the obvious maps.
+
+  (2). Note that
+  \[
+    C_q(1) = q(1)\bar{q} = q\bar{q} = 1
+  \]  
+  since $C_q$ is linear,
+  \[
+    C_q(v) = C_q(\Re(v) + \Im(v)) = C_q(\Re(v)) + C_q(\Im(v)) = \Re(v) + C_q(\Im(v))
+  \]
+  fixing $\Re(v) = 0$, it follows that $C_q$ maps $\text{span}\{\mathbf{i}, \mathbf{j}, \mathbf{k}\}$ to itself.
+  Therefore, $C_q \big|_{\Im(\HH)}$ can be regaurded as an element of $\Ogroup{3}$ by identifying it with a matrix $A \in \Ogroup{3}$ so that the following commutes:
+  \[\begin{tikzcd}
+    {\{\mathbf{i}, \mathbf{j}, \mathbf{k}\}} &&& \Im(\HH) \\
+    \\
+    \\
+    {\{e_1, e_2, e_3\}} &&& {\R^3}
+    \arrow["{C_q |_{\Im(\HH)}}", from=1-1, to=1-4]
+    \arrow["\pi"', from=1-1, to=4-1]
+    \arrow["{A}"', from=4-1, to=4-4]
+    \arrow["\rho", from=1-4, to=4-4]
+  \end{tikzcd}\]
+  where $\pi$ and $\rho$ are the obvious maps.
+
+  (3). To show $\varphi$ is a group homomorphism, fix $q, r \in \Sp{1}$ and $v \in \Im(\HH)$.
+  Then,
+  \[
+  \begin{aligned}
+    \varphi(qr)(v) &= C_{qr} \big|_{\Im(\HH)}(v) \\
+                   &= (qr)v(\overline{qr}) \\
+                   &= (qr)v(\bar{r} \bar{q}) \\
+                   &= q(rv\bar{r})\bar{q} \\
+                   &= q \cdot C_{r} \big|_{\Im(\HH)}(v) \cdot \bar{q} \\
+                   &= C_{q} \big|_{\Im(\HH)} \circ C_{r} \big|_{\Im(\HH)}(v) \\
+                   &= \varphi(q) \circ \varphi(r) (v)
+  \end{aligned}
+  \]
+
+  (4) The kernel of $\varphi$ is given by
+  \[
+  \ker{\varphi} := \{q \in \HH : \varphi(q) = \textbf{id}\}
+  \]
+  where $\textbf{id}$ is the identity map 
+  \[\varphi(q)(v) = C_{q} \big|_{\Im(\HH)}(v) = qv\bar{q} = v\]
+  for all $v$.
+  Hence, if $\varphi(q) \in \ker{\varphi}$, we must have $qv = vq$, and so by Exercise 1.18, $q \in \R$, and since $q \in \Sp{1}$, $|q| = 1$, hence it must be the case that $\ker{\varphi} = \{1, -1\}$.
+  Therefore, $\varphi$ is two-to-one.
+
+\end{solution}
+
+% Exercise 3.17
+\begin{taggedexercise}[Complete]
+  Think of $\Sp{1} \times \Sp{1}$ as the group of pairs of unit length quarternions.
+  \begin{enumerate}
+    \item For every $q = (q_1, q_2) \in \Sp{1} \times \Sp{1}$ the map $F(q): \HH \to \HH$ defined by $F(q) := q_1v\bar{q_2}$ is an orthogonal linear transformation, and can thus be identified with an element of $\Ogroup{4}$ w.r.t the natural basis $\{1, \mathbf{i}, \mathbf{j}, \mathbf{k}\}$.
+    \item Show that the function $F: \Sp{1} \times \Sp{1} \to \Ogroup{4}$ is a group homomorphism.
+    \item Verify $\ker{F} = \{(1, 1), (-1, -1)\}$ and is therefore two-to-one.
+    \item How is $F$ related to $\varphi$ from the previous exercise?
+  \end{enumerate}
+\end{taggedexercise}
+
+\begin{solution}
+  (1). To show $F$ is a linear transformation, let $v, w \in \HH$ and fix $q = (q_1, q_2) \in \Sp{1} \times \Sp{1}$. 
+  Then,
+  \[
+  \begin{aligned}
+    F(q)(v+w) &= q_1(v+w)\bar{q_2} \\
+              &= q_1(v\bar{q_2} + w\bar{q_2}) \\
+              &= q_1v\bar{q_2} + q_1w\bar{q_2} \\
+              &= F(q)(v) + F(q)(w).
+  \end{aligned}
+  \]
+  Next, fixing $\lambda \in \R$, 
+  \[
+  \begin{aligned}
+    F(q)(\lambda v) &= q_1(\lambda v)\bar{q_2} \\
+                    &= \lambda(q_1v\bar{q_2}) \\
+                    &= \lambda \cdot F(q)(v)
+  \end{aligned}
+  \]
+  hence $F(q)$ is linear.
+  Next,
+  \[
+  \begin{aligned}
+    \langle F(q)(v), F(q)(w) \rangle &= \langle q_1v\bar{q_2}, q_1w\bar{q_2} \rangle \\
+                                     &= \Re(\overline{q_1v\bar{q_2}} \cdot q_1w\bar{q_2}) \\
+                                     &= \Re(\overline{v\bar{q_2}}\bar{q_1}\cdot q_1w\bar{q_2}) \\
+                                     &= \Re(\overline{v\bar{q_2}}(\bar{q_1}q_1)w\bar{q_2}) \\
+                                     &= \Re(\overline{v\bar{q_2}}w\bar{q_2}) \\
+                                     &= \Re(q_2 \bar{v}w\bar{q_2}) \\
+                                     &\stackrel{*}{=} \Re(\bar{v}w) \\
+                                     &= \langle v, w \rangle 
+  \end{aligned}
+  \]    
+  where the $\stackrel{*}{=}$ is justified in the same manner as Exercise 3.15.1.
+  Hence, $F(q)$ is othogonal and can be identified with an element $A \in \Ogroup{4}$ diagramatically via 
+  \[\begin{tikzcd}
+    {\{1, \mathbf{i}, \mathbf{j}, \mathbf{k}\}} &&& \HH \\
+    \\
+    \\
+    {\{e_1, e_2, e_3, e_4\}} &&& {\R^4}
+    \arrow["{F(q)}", from=1-1, to=1-4]
+    \arrow["\pi"', from=1-1, to=4-1]
+    \arrow["{A}"', from=4-1, to=4-4]
+    \arrow["\rho", from=1-4, to=4-4]
+  \end{tikzcd}\]
+  where $\pi$ and $\rho$ are the obvious maps.
+
+  (2). To show $F$ is a group homomorphism, fix $q, r \in \Sp{1} \times \Sp{1}$ and $v \in \HH$.
+  Then, 
+  \[
+  \begin{aligned}
+    F(qr)(v) &= F((q_1, q_2) \cdot (r_1, r_2))(v) \\
+             &= F((q_1r_1, q_2r_2))(v) \\
+             &= (q_1r_1)v(\overline{q_2r_2}) \\
+             &= q_1(r_1v\bar{r_2})\bar{q_2} \\
+             &= q_1 \cdot (F(r)(v)) \cdot\bar{q_2} \\
+             &= F(q) \circ F(r) (v)
+  \end{aligned}
+  \]
+  hence the result. 
+
+  (3). The kernel of $F$ is given by
+  \[
+  \ker{F} := \{q \in \HH : F(q) = \textbf{id}\}
+  \]
+  where $\textbf{id}$ is the identity map 
+  \[
+  F(q)(v) = q_1v\bar{q_2} = v
+  \]
+  for all $v$. 
+  Hence, $q_1v = vq_2$, and using a similar argument to Exercise 3.16.4, the only solutions are $(1,1)$ and $(-1, -1)$, hence
+  \[\ker{F} = \{(1,1), (-1,-1)\}\]
+
+  (4). $F$ is a double cover of $\Ogroup{4}$, and $\varphi$ is a double cover of $\Ogroup{3}$.
+  Moreover, we get the following diagram:
+  \[\begin{tikzcd}
+    {\Sp{1} \times \Sp{1}} &&& \Ogroup{4} \\
+    \\
+    \\
+    {\Sp{1}} &&& {\Ogroup{3}}
+    \arrow["{F}", from=1-1, to=1-4]
+    \arrow["\pi"', from=1-1, to=4-1]
+    \arrow["{\varphi}"', from=4-1, to=4-4]
+    \arrow["?", from=1-4, to=4-4]
+  \end{tikzcd}\]
+  where $?$ is an interesting map which maps both connected components of $\Ogroup{4}$ to the corresponding connected components of $\Ogroup{3}$.
+\end{solution}
+
+%TODO
+% Exercise 3.18
+\begin{taggedexercise}[TODO]
+
+\end{taggedexercise}
+
+
 
 
 %==============================================================================
@@ -1225,12 +1492,80 @@ Let $C_l = \sum_{k=0}^l A_kB_{l-k}$. Prove that
 %==============================================================================
 \section{Exercises}
 
-\begin{exercise}
-Another exercise goes here.
-\end{exercise}
+\begin{taggedexercise}[Complete]
+  Define the $\textbf{stereographic projection}$ as 
+  \[
+  f: S^2 - \{0,0,1\} \to \R^2
+  \]
+  via shooting a lazer from the north pole of $S^2$; the lazer hits a point $p = (x,y,z)$ on $S^2$ and a subsequent point on $R^2$ (given by the plane $z = -1$), identifying $p \in S^2 - \{0,0,1\}$ with $f(p) \in \R^2$.
+  \begin{enumerate}
+    \item Show that \[f(x,y,z) = \frac{2}{1-z}(x,y)\]
+    \item Find a formula for $f^{-1}$
+    \item Find a formula \[g: S^2 - \{0,0,-1\} \to \R^2\] defined analgously to $f$, but the plane of intersection is $z=1$.
+    \item Find an explicit formula for the composition \[g \circ f^{-1} : \R^2 - \{0,0\} \to \R^2 - \{(0,0)\}\]
+  \end{enumerate}
+\end{taggedexercise}
 
 \begin{solution}
-Placeholder for your solution.
+  (1). Fix the following lines:
+  \begin{enumerate}
+    \item $\ell_1$ between $(0,0,-1)$ and $(0,0,1)$
+    \item $\ell_2$ between $(0,0,1)$ and $f(p) = f(x,y,z)$
+    \item $\ell_3$ between $(0,0,-1)$ and $f(p) = f(x,y,z)$
+    \item $\ell_4$ between $(0,0,1)$ and $(0,0,1-z)$
+    \item $\ell_5$ between $(0,0,1)$ and $p = (x,y,z)$
+    \item $\ell_6$ between $(0,0,1-z)$ and $p = (x,y,z)$
+  \end{enumerate}
+  Its clear that $T_1 = \{\ell_1, \ell_2, \ell_3\}$ and $T_2 = \{\ell_4, \ell_5, \ell_6\}$ are similar.
+  Morever, $\ell_1 = 2$ and $\ell_4 = 1-z$.
+  Therefore,
+  \[
+  \frac{1-z}{2} = \frac{(x,y)}{f(x,y,z)} \implies f(x,y,z) = \frac{2}{1-z}(x,y).
+  \]
+ 
+  (2). Let $f(x,y,z) = (u, v) \in \R^2$.
+  Then, parameterize the line from $(0,0,1)$ to $(u,v)$ with
+  \[L(t) = (0, 0, 1) + t(u, v, -2) = (tu, tv, 1-2t)\]
+  where $t \in [0, 1]$.
+  We want to know when $L(t)$ intersects the sphere, as in when 
+  \[\begin{aligned}
+    (tu)^2 + (tv)^2 + (1-2t)^2 = 1 &\implies (u^2 + v^2)t^2 -4t + 4t^2= 0 \\
+                                   &\implies (u^2 + v^2 + 4)t^2 -4t= 0 \\
+                                   &\implies t\left[(u^2 + v^2 + 4)t -4 \right]= 0 \\
+  \end{aligned}
+  \]
+  where $t = \frac{4}{u^2 + v^2 + 4}$ is clearly the relevant solution.
+  Therefore, 
+  \[
+  f^{-1}(u, v) = (tu, tv, 1-2t) = \left(\frac{4u}{u^2 + v^2 + 4},\frac{4v}{u^2 + v^2 + 4},1 - \frac{8}{u^2 + v^2 + 4} \right)
+  \]
+  
+  (3). We can recover step (1) by mapping $1-z \to z-1$, hence we get 
+  \[g(x,y,z) = \frac{2}{z-1}(x,y)\] 
+
+  (4). Let $c = \frac{4}{u^2 + v^2 + 4}$.
+  Composition gives
+  \[\begin{aligned}
+    g \circ f^{-1}(u, v) &= g\left(cu,cv,1 - 2c\right) \\
+                         &= \frac{2}{1-1-2c}(cu, cv) \\
+                         &= -(u,v)
+  \end{aligned}\]
+  which is super chill!
+
+\end{solution}
+
+\begin{taggedexercise}[WIP]
+  Prove that $S^n \subset \R^{n+1}$ is an $n-$dimensional manifold.
+\end{taggedexercise}
+\begin{solution}
+  Define 
+  \[V = \{(x_1, \dots, x_{n+1}) \in S^n : x_{n+1} >0\}\]
+  which is a neigbourhood of $(0, 0, \dots, 1) \in S^n$.
+  Next, define
+  \[U = \{(a_1, \dots, a_n) : a_1^2 + \cdots + a_n^2 < 1\}\]
+  and define
+  \[\varphi : U \to V\]
+  \[\varphi(a_1, \dots, a_n) := (a_1, a_2, \dots , a_n, \sqrt{1 - a_n^2 - \cdots - a_1^2})\]
 \end{solution}
 
 %==============================================================================
@@ -1238,13 +1573,47 @@ Placeholder for your solution.
 %==============================================================================
 \section{Exercises}
 
-\begin{exercise}
+% Exercise 8.1
+\begin{taggedexercise}[TODO]
 Another exercise goes here.
-\end{exercise}
+\end{taggedexercise}
+
+% Exercise 8.2
+\begin{taggedexercise}[TODO]
+  Let $G_1, G_2$ be matrix groups with Lie algebras $\mathfrak{g}_1, \mathfrak{g_2}$.
+  Suppose that $f: G_1 \to G_2$ is a smooth homomorphism.
+  If $df_I : \mathfrak{g}_1 \to \mathfrak{g}_2$ is bijective, prove that $df_g : T_gG_1 \to T_{f(g)}G_2$ is bijective for all $g \in G_1$.
+\end{taggedexercise}
 
 \begin{solution}
-Placeholder for your solution.
+  Let $a(0) = b(0) = I_{G_1}$ with $a'(0) = A, b'(0) = B$ for some $A, B \in \mathfrak{g_1}$.
+  
 \end{solution}
+
+% Exercise 8.3
+\begin{taggedexercise}[TODO]
+  Another exercise goes here.
+\end{taggedexercise}
+
+% Exercise 8.4
+\begin{taggedexercise}[TODO]
+  Another exercise goes here.
+\end{taggedexercise}
+
+% Exercise 8.5
+\begin{taggedexercise}[TODO]
+  Another exercise goes here.
+\end{taggedexercise}
+
+% Exercise 8.6
+\begin{taggedexercise}[TODO]
+  Another exercise goes here.
+\end{taggedexercise}
+
+% Exercise 8.7
+\begin{taggedexercise}[TODO]
+  Another exercise goes here.
+\end{taggedexercise}
 
 %==============================================================================
 \chapter{Maximal tori}
