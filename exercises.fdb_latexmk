@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1735948265.78958 "/Users/tyler_jensen/matrix-groups-for-undergraduates/exercises.tex" "exercises.pdf" "exercises" 1735948266.74471 0
-  "/Users/tyler_jensen/matrix-groups-for-undergraduates/exercises.tex" 1735948265.36151 54039 d98ebc3dc014e888a954e92918cf1297 ""
+["pdflatex"] 1735948622.19349 "/Users/tyler_jensen/matrix-groups-for-undergraduates/exercises.tex" "exercises.pdf" "exercises" 1735948623.04979 0
+  "/Users/tyler_jensen/matrix-groups-for-undergraduates/exercises.tex" 1735948621.078 56092 b8f772eb45bc3d6fb90edd4f41760a7d ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1254269338 2375 baa924870cfb487815765f9094cf3728 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc" 1202520719 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1202520719 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
@@ -172,9 +172,9 @@
   "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1735142277.41401 5467645 128b85b7cde5f5edc5cb7f1dd7ff8736 ""
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1735142194 8221436 20ce0d3edd859420fb540eae8f11461b ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "exercises.aux" 1735948266.64586 10533 1098c20972b680358d40cca1cd2c10cd "pdflatex"
-  "exercises.tex" 1735948265.36151 54039 d98ebc3dc014e888a954e92918cf1297 ""
-  "exercises.toc" 1735948266.64723 5687 9fd2c145f4edcd4d017ea88db2ed0baf "pdflatex"
+  "exercises.aux" 1735948622.95643 11984 ce2d18bfe3a986dc83c2c1d012aba845 "pdflatex"
+  "exercises.tex" 1735948621.078 56092 b8f772eb45bc3d6fb90edd4f41760a7d ""
+  "exercises.toc" 1735948622.95763 7138 4a0b624477803c467931586c5a5b09b0 "pdflatex"
   (generated)
   "exercises.aux"
   "exercises.log"
