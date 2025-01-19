@@ -19,79 +19,91 @@
 \contentsline {subsection}{Exercise 1.18\ [\textcolor {green}{Complete}]}{7}{}%
 \contentsline {chapter}{\numberline {2}All matrix groups are real matrix groups}{9}{}%
 \contentsline {section}{\numberline {2.1}Exercises}{9}{}%
-\contentsline {chapter}{\numberline {3}The orthogonal groups}{11}{}%
-\contentsline {section}{\numberline {3.1}Exercises}{11}{}%
-\contentsline {subsection}{Exercise 3.1\ [\textcolor {green}{Complete}]}{11}{}%
-\contentsline {subsection}{Exercise 3.2\ [\textcolor {green}{Complete}]}{11}{}%
-\contentsline {subsection}{Exercise 3.3\ [\textcolor {yellow}{WIP}]}{12}{}%
-\contentsline {subsection}{Exercise 3.4\ [\textcolor {green}{Complete}]}{13}{}%
-\contentsline {subsection}{Exercise 3.5\ [\textcolor {green}{Complete}]}{13}{}%
-\contentsline {subsection}{Exercise 3.6\ [\textcolor {green}{Complete}]}{13}{}%
-\contentsline {subsection}{Exercise 3.7\ [\textcolor {yellow}{WIP}]}{14}{}%
-\contentsline {subsection}{Exercise 3.8\ [\textcolor {red}{TODO}]}{14}{}%
-\contentsline {subsection}{Exercise 3.9\ [\textcolor {red}{TODO}]}{15}{}%
-\contentsline {subsection}{Exercise 3.10\ [\textcolor {red}{TODO}]}{15}{}%
-\contentsline {subsection}{Exercise 3.11\ [\textcolor {red}{TODO}]}{15}{}%
-\contentsline {subsection}{Exercise 3.12\ [\textcolor {red}{TODO}]}{15}{}%
-\contentsline {subsection}{Exercise 3.13\ [\textcolor {red}{TODO}]}{15}{}%
-\contentsline {subsection}{Exercise 3.14\ [\textcolor {red}{TODO}]}{15}{}%
-\contentsline {subsection}{Exercise 3.15\ [\textcolor {red}{TODO}]}{15}{}%
-\contentsline {subsection}{Exercise 3.16\ [\textcolor {green}{Complete}]}{15}{}%
-\contentsline {subsection}{Exercise 3.17\ [\textcolor {green}{Complete}]}{17}{}%
-\contentsline {subsection}{Exercise 3.18\ [\textcolor {red}{TODO}]}{19}{}%
-\contentsline {chapter}{\numberline {4}The topology of matrix groups}{21}{}%
-\contentsline {section}{\numberline {4.1}Exercises}{21}{}%
-\contentsline {subsection}{Exercise 4.1\ [\textcolor {red}{TODO}]}{21}{}%
-\contentsline {chapter}{\numberline {5}Lie algebras}{23}{}%
-\contentsline {section}{\numberline {5.1}Exercises}{23}{}%
-\contentsline {subsection}{Exercise 5.1\ [\textcolor {red}{TODO}]}{23}{}%
-\contentsline {subsection}{Exercise 5.2\ [\textcolor {red}{TODO}]}{23}{}%
-\contentsline {subsection}{Exercise 5.3\ [\textcolor {red}{TODO}]}{23}{}%
-\contentsline {subsection}{Exercise 5.4\ [\textcolor {red}{TODO}]}{23}{}%
-\contentsline {subsection}{Exercise 5.5\ [\textcolor {red}{TODO}]}{23}{}%
-\contentsline {subsection}{Exercise 5.6\ [\textcolor {red}{TODO}]}{23}{}%
-\contentsline {subsection}{Exercise 5.7\ [\textcolor {red}{TODO}]}{23}{}%
-\contentsline {subsection}{Exercise 5.8\ [\textcolor {red}{TODO}]}{23}{}%
-\contentsline {subsection}{Exercise 5.9\ [\textcolor {red}{TODO}]}{23}{}%
-\contentsline {subsection}{Exercise 5.10\ [\textcolor {red}{TODO}]}{23}{}%
-\contentsline {subsection}{Exercise 5.11\ [\textcolor {red}{TODO}]}{23}{}%
-\contentsline {subsection}{Exercise 5.12\ [\textcolor {red}{TODO}]}{23}{}%
-\contentsline {subsection}{Exercise 5.13\ [\textcolor {red}{TODO}]}{23}{}%
-\contentsline {subsection}{Exercise 5.14\ [\textcolor {red}{TODO}]}{23}{}%
-\contentsline {subsection}{Exercise 5.15\ [\textcolor {red}{TODO}]}{23}{}%
-\contentsline {subsection}{Exercise 5.16\ [\textcolor {red}{TODO}]}{23}{}%
-\contentsline {chapter}{\numberline {6}Matrix exponentiation}{25}{}%
-\contentsline {section}{\numberline {6.1}Exercises}{25}{}%
-\contentsline {subsection}{Exercise 6.1\ [\textcolor {yellow}{WIP}]}{25}{}%
-\contentsline {subsection}{Exercise 6.2\ [\textcolor {green}{Complete}]}{25}{}%
-\contentsline {subsection}{Exercise 6.3\ [\textcolor {green}{Complete}]}{26}{}%
-\contentsline {subsection}{Exercise 6.4\ [\textcolor {yellow}{WIP}]}{27}{}%
-\contentsline {subsection}{Exercise 6.5\ [\textcolor {green}{Complete}]}{27}{}%
-\contentsline {subsection}{Exercise 6.6\ [\textcolor {yellow}{WIP}]}{28}{}%
-\contentsline {subsection}{Exercise 6.7\ [\textcolor {yellow}{WIP}]}{28}{}%
-\contentsline {subsection}{Exercise 6.8\ [\textcolor {yellow}{WIP}]}{29}{}%
-\contentsline {subsection}{Exercise 6.9\ [\textcolor {yellow}{WIP}]}{29}{}%
-\contentsline {subsection}{Exercise 6.10\ [\textcolor {red}{TODO}]}{30}{}%
-\contentsline {subsection}{Exercise 6.11\ [\textcolor {red}{TODO}]}{30}{}%
-\contentsline {subsection}{Exercise 6.12\ [\textcolor {red}{TODO}]}{30}{}%
-\contentsline {subsection}{Exercise 6.13\ [\textcolor {red}{TODO}]}{30}{}%
-\contentsline {subsection}{Exercise 6.14\ [\textcolor {red}{TODO}]}{30}{}%
-\contentsline {chapter}{\numberline {7}Matrix groups are manifolds}{31}{}%
-\contentsline {section}{\numberline {7.1}Exercises}{31}{}%
-\contentsline {subsection}{Exercise 7.1\ [\textcolor {green}{Complete}]}{31}{}%
-\contentsline {subsection}{Exercise 7.2\ [\textcolor {yellow}{WIP}]}{32}{}%
-\contentsline {chapter}{\numberline {8}The Lie bracket}{33}{}%
-\contentsline {section}{\numberline {8.1}Exercises}{33}{}%
-\contentsline {subsection}{Exercise 8.1\ [\textcolor {red}{TODO}]}{33}{}%
-\contentsline {subsection}{Exercise 8.2\ [\textcolor {red}{TODO}]}{33}{}%
-\contentsline {subsection}{Exercise 8.3\ [\textcolor {red}{TODO}]}{33}{}%
-\contentsline {subsection}{Exercise 8.4\ [\textcolor {red}{TODO}]}{33}{}%
-\contentsline {subsection}{Exercise 8.5\ [\textcolor {red}{TODO}]}{33}{}%
-\contentsline {subsection}{Exercise 8.6\ [\textcolor {red}{TODO}]}{33}{}%
-\contentsline {subsection}{Exercise 8.7\ [\textcolor {red}{TODO}]}{33}{}%
-\contentsline {chapter}{\numberline {9}Maximal tori}{35}{}%
-\contentsline {section}{\numberline {9.1}Exercises}{35}{}%
-\contentsline {chapter}{\numberline {10}Homogeneous manifolds}{37}{}%
-\contentsline {section}{\numberline {10.1}Exercises}{37}{}%
-\contentsline {chapter}{\numberline {11}Roots}{39}{}%
-\contentsline {section}{\numberline {11.1}Exercises}{39}{}%
+\contentsline {subsection}{Exercise 2.1\ [\textcolor {green}{Complete}]}{9}{}%
+\contentsline {subsection}{Exercise 2.2\ [\textcolor {red}{TODO}]}{10}{}%
+\contentsline {subsection}{Exercise 2.3\ [\textcolor {red}{TODO}]}{10}{}%
+\contentsline {subsection}{Exercise 2.4\ [\textcolor {red}{TODO}]}{10}{}%
+\contentsline {subsection}{Exercise 2.5\ [\textcolor {green}{Complete}]}{10}{}%
+\contentsline {subsection}{Exercise 2.6\ [\textcolor {green}{Complete}]}{10}{}%
+\contentsline {subsection}{Exercise 2.7\ [\textcolor {red}{TODO}]}{11}{}%
+\contentsline {subsection}{Exercise 2.8\ [\textcolor {red}{TODO}]}{11}{}%
+\contentsline {subsection}{Exercise 2.9\ [\textcolor {red}{TODO}]}{11}{}%
+\contentsline {subsection}{Exercise 2.10\ [\textcolor {red}{TODO}]}{11}{}%
+\contentsline {subsection}{Exercise 2.11\ [\textcolor {red}{TODO}]}{11}{}%
+\contentsline {subsection}{Exercise 2.12\ [\textcolor {red}{TODO}]}{11}{}%
+\contentsline {chapter}{\numberline {3}The orthogonal groups}{13}{}%
+\contentsline {section}{\numberline {3.1}Exercises}{13}{}%
+\contentsline {subsection}{Exercise 3.1\ [\textcolor {green}{Complete}]}{13}{}%
+\contentsline {subsection}{Exercise 3.2\ [\textcolor {green}{Complete}]}{13}{}%
+\contentsline {subsection}{Exercise 3.3\ [\textcolor {yellow}{WIP}]}{14}{}%
+\contentsline {subsection}{Exercise 3.4\ [\textcolor {green}{Complete}]}{15}{}%
+\contentsline {subsection}{Exercise 3.5\ [\textcolor {green}{Complete}]}{15}{}%
+\contentsline {subsection}{Exercise 3.6\ [\textcolor {green}{Complete}]}{15}{}%
+\contentsline {subsection}{Exercise 3.7\ [\textcolor {yellow}{WIP}]}{16}{}%
+\contentsline {subsection}{Exercise 3.8\ [\textcolor {red}{TODO}]}{16}{}%
+\contentsline {subsection}{Exercise 3.9\ [\textcolor {red}{TODO}]}{17}{}%
+\contentsline {subsection}{Exercise 3.10\ [\textcolor {green}{Complete}]}{17}{}%
+\contentsline {subsection}{Exercise 3.11\ [\textcolor {green}{Complete}]}{17}{}%
+\contentsline {subsection}{Exercise 3.12\ [\textcolor {green}{Complete}]}{17}{}%
+\contentsline {subsection}{Exercise 3.13\ [\textcolor {green}{Complete}]}{18}{}%
+\contentsline {subsection}{Exercise 3.14\ [\textcolor {green}{Complete}]}{19}{}%
+\contentsline {subsection}{Exercise 3.15\ [\textcolor {green}{Complete}]}{20}{}%
+\contentsline {subsection}{Exercise 3.16\ [\textcolor {green}{Complete}]}{20}{}%
+\contentsline {subsection}{Exercise 3.17\ [\textcolor {green}{Complete}]}{22}{}%
+\contentsline {subsection}{Exercise 3.18\ [\textcolor {yellow}{WIP}]}{24}{}%
+\contentsline {chapter}{\numberline {4}The topology of matrix groups}{25}{}%
+\contentsline {section}{\numberline {4.1}Exercises}{25}{}%
+\contentsline {subsection}{Exercise 4.1\ [\textcolor {red}{TODO}]}{25}{}%
+\contentsline {chapter}{\numberline {5}Lie algebras}{27}{}%
+\contentsline {section}{\numberline {5.1}Exercises}{27}{}%
+\contentsline {subsection}{Exercise 5.1\ [\textcolor {red}{TODO}]}{27}{}%
+\contentsline {subsection}{Exercise 5.2\ [\textcolor {green}{Complete}]}{27}{}%
+\contentsline {subsection}{Exercise 5.3\ [\textcolor {red}{TODO}]}{27}{}%
+\contentsline {subsection}{Exercise 5.4\ [\textcolor {red}{TODO}]}{27}{}%
+\contentsline {subsection}{Exercise 5.5\ [\textcolor {green}{Complete}]}{27}{}%
+\contentsline {subsection}{Exercise 5.6\ [\textcolor {green}{Complete}]}{28}{}%
+\contentsline {subsection}{Exercise 5.7\ [\textcolor {green}{Complete}]}{28}{}%
+\contentsline {subsection}{Exercise 5.8\ [\textcolor {red}{TODO}]}{28}{}%
+\contentsline {subsection}{Exercise 5.9\ [\textcolor {red}{TODO}]}{28}{}%
+\contentsline {subsection}{Exercise 5.10\ [\textcolor {red}{TODO}]}{28}{}%
+\contentsline {subsection}{Exercise 5.11\ [\textcolor {red}{TODO}]}{28}{}%
+\contentsline {subsection}{Exercise 5.12\ [\textcolor {red}{TODO}]}{28}{}%
+\contentsline {subsection}{Exercise 5.13\ [\textcolor {red}{TODO}]}{28}{}%
+\contentsline {subsection}{Exercise 5.14\ [\textcolor {red}{TODO}]}{28}{}%
+\contentsline {subsection}{Exercise 5.15\ [\textcolor {red}{TODO}]}{28}{}%
+\contentsline {subsection}{Exercise 5.16\ [\textcolor {red}{TODO}]}{28}{}%
+\contentsline {chapter}{\numberline {6}Matrix exponentiation}{29}{}%
+\contentsline {section}{\numberline {6.1}Exercises}{29}{}%
+\contentsline {subsection}{Exercise 6.1\ [\textcolor {yellow}{WIP}]}{29}{}%
+\contentsline {subsection}{Exercise 6.2\ [\textcolor {green}{Complete}]}{29}{}%
+\contentsline {subsection}{Exercise 6.3\ [\textcolor {green}{Complete}]}{30}{}%
+\contentsline {subsection}{Exercise 6.4\ [\textcolor {yellow}{WIP}]}{31}{}%
+\contentsline {subsection}{Exercise 6.5\ [\textcolor {green}{Complete}]}{31}{}%
+\contentsline {subsection}{Exercise 6.6\ [\textcolor {yellow}{WIP}]}{32}{}%
+\contentsline {subsection}{Exercise 6.7\ [\textcolor {yellow}{WIP}]}{32}{}%
+\contentsline {subsection}{Exercise 6.8\ [\textcolor {yellow}{WIP}]}{33}{}%
+\contentsline {subsection}{Exercise 6.9\ [\textcolor {yellow}{WIP}]}{33}{}%
+\contentsline {subsection}{Exercise 6.10\ [\textcolor {red}{TODO}]}{34}{}%
+\contentsline {subsection}{Exercise 6.11\ [\textcolor {green}{Complete}]}{34}{}%
+\contentsline {subsection}{Exercise 6.12\ [\textcolor {green}{Complete}]}{34}{}%
+\contentsline {subsection}{Exercise 6.13\ [\textcolor {green}{Complete}]}{34}{}%
+\contentsline {subsection}{Exercise 6.14\ [\textcolor {red}{TODO}]}{34}{}%
+\contentsline {chapter}{\numberline {7}Matrix groups are manifolds}{35}{}%
+\contentsline {section}{\numberline {7.1}Exercises}{35}{}%
+\contentsline {subsection}{Exercise 7.1\ [\textcolor {green}{Complete}]}{35}{}%
+\contentsline {subsection}{Exercise 7.2\ [\textcolor {yellow}{WIP}]}{36}{}%
+\contentsline {chapter}{\numberline {8}The Lie bracket}{37}{}%
+\contentsline {section}{\numberline {8.1}Exercises}{37}{}%
+\contentsline {subsection}{Exercise 8.1\ [\textcolor {green}{Complete}]}{37}{}%
+\contentsline {subsection}{Exercise 8.2\ [\textcolor {red}{Complete}]}{38}{}%
+\contentsline {subsection}{Exercise 8.3\ [\textcolor {yellow}{WIP}]}{38}{}%
+\contentsline {subsection}{Exercise 8.4\ [\textcolor {red}{TODO}]}{39}{}%
+\contentsline {subsection}{Exercise 8.5\ [\textcolor {red}{TODO}]}{39}{}%
+\contentsline {subsection}{Exercise 8.6\ [\textcolor {red}{TODO}]}{39}{}%
+\contentsline {subsection}{Exercise 8.7\ [\textcolor {red}{TODO}]}{39}{}%
+\contentsline {chapter}{\numberline {9}Maximal tori}{41}{}%
+\contentsline {section}{\numberline {9.1}Exercises}{41}{}%
+\contentsline {chapter}{\numberline {10}Homogeneous manifolds}{43}{}%
+\contentsline {section}{\numberline {10.1}Exercises}{43}{}%
+\contentsline {chapter}{\numberline {11}Roots}{45}{}%
+\contentsline {section}{\numberline {11.1}Exercises}{45}{}%

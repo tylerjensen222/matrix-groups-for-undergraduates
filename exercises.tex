@@ -131,7 +131,7 @@
 
 %--- Lie algebras
 \newcommand{\lie}[1]{\mathfrak{#1}}         % \lie{g} -> \mathfrak{g}
-\newcommand{\so}[1]{\mathfrak{so}_{#1}}     % so(n)
+\newcommand{\so}[1]{\mathfrak{so}(#1)}     % so(n)
 \newcommand{\sualg}[1]{\mathfrak{su}_{#1}}  % su(n)
 \newcommand{\glalg}[1]{\mathfrak{gl}_{#1}}  % gl(n)
 \newcommand{\slalg}[1]{\mathfrak{sl}_{#1}}  % sl(n)
@@ -140,6 +140,10 @@
 %--- Generic placeholders for a Lie algebra g and Lie group G
 \newcommand{\g}{\mathfrak{g}}
 \newcommand{\G}{\mathrm{G}}
+
+%--- Overide Im and Re
+\renewcommand{\Im}{\text{Im}}
+\renewcommand{\Re}{\text{Re}}
 
 \frontmatter
 \maketitle
@@ -593,6 +597,178 @@ Which can be applied to the above question to derive a simple answer.
 %==============================================================================
 \section{Exercises}
 
+% Exercise 2.1
+\begin{taggedexercise}[\textcolor{green}{Complete}]
+  Prove that $\rho_n$ makes the diagram in 2.1 commute.
+\end{taggedexercise}
+
+\begin{solution}
+  First, note the definition of $\rho_n$, that is 
+  \[\rho_1(a + b\mathfrak{i}) := \mattwo{a}{b}{-b}{a}\]
+  Say $A \in M_n(\C)$, then the map $\rho_n : M_n(\C) \to M_{2n}$ is simply given by
+  \[
+\rho_n(A) = \rho_n \left(
+\begin{bmatrix}
+z_{11} & z_{12} & \cdots & z_{1n} \\
+z_{21} & z_{22} & \cdots & z_{2n} \\
+\vdots & \vdots & \ddots & \vdots \\
+z_{n1} & z_{n2} & \cdots & z_{nn}
+\end{bmatrix}\right) 
+:= \begin{bmatrix}
+  \rho_1(z)_{11} & \rho_1(z)_{12} & \cdots & \rho_1(z)_{1n} \\
+  \rho_1(z)_{21} & \rho_1(z)_{22} & \cdots & \rho_1(z)_{2n} \\
+  \vdots & \vdots & \ddots & \vdots \\
+  \rho_1(z)_{n1} & \rho_1(z)_{n2} & \cdots & \rho_1(z)_{nn}
+  \end{bmatrix}
+\]
+where each $\rho_1(z)_{ij}$ is a $2 \times 2$ block matrix as defined above.
+We want to show the following diagram commutes:
+\[\begin{tikzcd}
+	{\C^n} &&& {\R^{2n}} \\
+	\\
+	{\C^n} &&& {\R^{2n}}
+	\arrow["{f_n}", from=1-1, to=1-4]
+	\arrow["{R_A}"', from=1-1, to=3-1]
+	\arrow["{R_{\rho_{n}(A)}}", from=1-4, to=3-4]
+	\arrow["{f_n}", from=3-1, to=3-4]
+\end{tikzcd}\]
+where
+\[f_n(a_1 + b_1\mathbf{i}, \dots, a_n + b_n\mathbf{i}) := (a_1, b_1, \dots, a_n, b_n)\]
+and $A \in M_n(\C)$.
+Let $z = a+b\mathbf{i} \in \C^1$ and $A = c+d\mathbf{i} \in \C^1$.
+Then,
+\[f_1 \circ R_A(z) = f_1 ((ac-bd) + (ad+bc)\mathbf{i}) = (ac-bd, ad+bc)\]
+and
+\[R_{\rho_{1}(A)} \circ f_1(z) = R_{\rho_{1}(A)}(a, b) = (ac-bd, ad+bc).\]
+Inducting over $n$ using the definition of matrix multiplication and block matrix multiplication produces the result.
+
+\end{solution}
+
+% Exercise 2.2
+\begin{taggedexercise}[\textcolor{red}{TODO}]
+  
+\end{taggedexercise}
+
+% Exercise 2.3
+\begin{taggedexercise}[\textcolor{red}{TODO}]
+  Prove proposition 2.6.
+\end{taggedexercise}
+
+% Exercise 2.4
+\begin{taggedexercise}[\textcolor{red}{TODO}]
+  Prove proposition 2.7.
+\end{taggedexercise}
+
+% Exercise 2.5
+\begin{taggedexercise}[\textcolor{green}{Complete}]
+  Prove that for any $A \in M_1(\HH)$, $\det(A) \in \R$.
+\end{taggedexercise}
+
+\begin{solution}
+  Let $A = z+w\mathbf{j} \in M_n(\HH)$.
+  Then,
+  \[\begin{aligned}
+    \det(A) &= \det \circ \Psi_1(A)\\
+           &= \det \mattwo{z}{w}{-\bar{w}}{\bar{z}} \\
+           &= z \cdot \bar{z} + w \cdot \bar{w} \\
+           &= \Re(z)^2 + \Im(z)^2 + \Re(w)^2 + \Im(z)^2 \in \R
+  \end{aligned}\]
+\end{solution}
+
+% Exercise 2.6
+\begin{taggedexercise}[\textcolor{green}{Complete}]
+  Prove that $\SL{n}{\HH} = \{A \in \GL{n}{\HH} : \det(A) = 1\}$ is a subgroup.
+  Describe a natural bijection between elements of $\SL{1}{\HH}$ and elements of the 3-sphere $S^3$.
+\end{taggedexercise}
+
+\begin{solution}
+  Fix $A, B \in \SL{n}{\HH}$.
+  Then,
+  \[
+  \begin{aligned}
+    \det(AB) &= \det \circ \Psi_n(AB) \\
+             &= \det \left(\Psi_n(A) \cdot \Psi_n(B) \right) \\
+             &= \det(\Psi_n(A)) \cdot \det(\Psi_n(B)) \\
+             &= (1) \cdot (1) = 1
+  \end{aligned}
+  \]    
+  hence, $\SL{n}{\HH}$ is closed. 
+  Next, 
+  \[\begin{aligned}
+    1 &= \det(I) \\
+      &= \det(AA^{-1}) \\
+      &= \det \circ \Psi_n(AA^{-1}) \\
+      &= \det \left(\Psi_n(A) \cdot \Psi_n(A^{-1}) \right) \\
+      &= \det(\Psi_n(A)) \cdot \det(\Psi_n(A^{-1})) \\
+      &= (1) \cdot \det(\Psi_n(A^{-1})) \\
+      &\implies \det(A^{-1}) = 1 \implies A^{-1} \in \SL{n}{\HH}
+  \end{aligned}\]
+  hence $\SL{n}{\HH}$ is a subgroup.
+  From Exercise 2.6, we have that for any $A = a +b\mathbf{i} + c\mathbf{j} + d\mathbf{k} \in \SL{n}{\HH}$ we have that 
+  \[1 = \det(A) = a^2 + b^2 + c^2 + d^2\]
+  hence, the map 
+  \[a + b\mathbf{i} + c\mathbf{j} + d\mathbf{k} \mapsto (a, b, c, d) \in S^3\]
+  is obviously a bijection.
+\end{solution}
+
+% Exercise 2.7
+\begin{taggedexercise}[\textcolor{red}{TODO}]
+  
+\end{taggedexercise}
+
+% Exercise 2.8
+\begin{taggedexercise}[\textcolor{red}{TODO}]
+  
+\end{taggedexercise}
+
+% Exercise 2.9
+\begin{taggedexercise}[\textcolor{red}{TODO}]
+  
+\end{taggedexercise}
+
+% Exercise 2.10
+\begin{taggedexercise}[\textcolor{red}{TODO}]
+  
+\end{taggedexercise}
+
+% Exercise 2.11
+\begin{taggedexercise}[\textcolor{red}{TODO}]
+  
+\end{taggedexercise}
+
+% Exercise 2.12
+\begin{taggedexercise}[\textcolor{red}{TODO}]
+  Let $q \in \HH$ and define $\C \cdot q := \{\lambda \cdot q : \lambda \in \C\}$ and $q \cdot \C := \{q \cdot \lambda : \lambda \in \C\}$.
+  \begin{enumerate}
+    \item With $g_1: \HH \to \C^2$ defined as in section Section 2, show that $g_1(\C \cdot q)$ is a one-dimensional $\C-$subspace of $\C^2$.
+    \item Define a natural identification $\hat{g}_1 : \HH \to \C^2$ so that $\hat{g}_1(q\cdot\C)$ is a one-dimensional $\C-$subspace of $\C^2$.
+  \end{enumerate}
+\end{taggedexercise}
+
+\begin{solution}
+  (1). Let $q = z+w\mathbf{j} \in \HH$ and $z,w \in \C$.
+  Then,
+  \[\begin{aligned}
+    g_1(\C \cdot q) &= \{g_1(\lambda \cdot q) : \lambda \in \C\} \\
+                    &= \{g_1(\lambda z + \lambda w \mathbf{j}): \lambda, z, w \in \C\} \\
+                    &= \{(\lambda z, \lambda w ): \lambda, z, w \in \C\} \\
+                    &= \{\lambda \cdot (z, w): \lambda, z, w \in \C\}
+  \end{aligned}\]
+  where $z$ and $w$ are determined by $q$ (hence they are fixed), and so $g_1(\C \cdot q)$ is clearly a one-dimensional $\C-$subspace of $\C^2$.
+
+  (2). Let $\iota: \HH \to \HH$ be given by $\iota(q) = \iota(z + w\mathbf{j}) = \iota(z + \mathbf{j}w)$ with $z,w \in \C$ and $f_1 : \HH \to \C^2$ given by
+  \[f_1(w+\mathbf{j}z):= (w, z).\]
+  Then, let $\hat{g}_1 = f_1 \circ \iota$.
+  Therefore,
+  \[\begin{aligned}
+    \hat{g}_1(q \cdot \C) &= \{\hat{g}_1(q \cdot \lambda) : \lambda \in \C\} \\
+                          &= \{f_1 \circ \iota(q \cdot \lambda) : \lambda \in \C\} \\
+                          &= \{f_1(z\lambda + \mathbf{j}w\lambda): \lambda, z, w \in \C\} \\
+                          &= \{(z\lambda, w\lambda): \lambda, z, w \in \C\} \\
+                          &= \{\lambda \cdot (z, w): \lambda, z, w \in \C\} 
+  \end{aligned}\]
+  which is the same subspace from part (1), hence the result.
+\end{solution}
 
 %==============================================================================
 \chapter{The orthogonal groups}
@@ -830,42 +1006,230 @@ Which can be applied to the above question to derive a simple answer.
 
 \end{taggedexercise}
 
-%\textcolor{red}{TODO}
+
 % Exercise 3.10
-\begin{taggedexercise}[\textcolor{red}{TODO}]
-
+\begin{taggedexercise}[\textcolor{green}{Complete}]
+Prove that $\text{Trans}(\R^n)$ is a normal subgroup of $\text{Isom}(\R^n)$.
 \end{taggedexercise}
 
-%\textcolor{red}{TODO}
+\begin{solution}
+  Fix $\mattwo{A}{0}{X}{1} \in \text{Isom}(\R^n)$.
+  Then,
+  \[\begin{aligned}
+    A \cdot \text{Trans}(\R^n) &= \mattwo{A}{0}{X}{1} \cdot \left\{\mattwo{I}{0}{Y}{1} : Y \in \R^n \right\} \\
+                               &= \left\{\mattwo{A}{0}{X + Y}{1} : Y \in \R^n \right\}
+  \end{aligned}\]
+  and
+  \[\begin{aligned}
+    \text{Trans}(\R^n) \cdot A &= \left\{\mattwo{I}{0}{Y}{1} : Y \in \R^n \right\} \cdot \mattwo{A}{0}{X}{1} \\
+                               &= \left\{\mattwo{A}{0}{X + R_A(Y)}{1} : Y \in \R^n \right\}
+  \end{aligned}\]
+  $R_A$ is one-to-one and onto, so we can always identify $X + Y_1$ with some $X + R_A(Y_2)$ with $Y_1, Y_2$ unique, hence both cosets are equivalent, and $\text{Trans}(\R^n)$ is normal.
+\end{solution}
+
 % Exercise 3.11
-\begin{taggedexercise}[\textcolor{red}{TODO}]
-
+\begin{taggedexercise}[\textcolor{green}{Complete}]
+Prove that the Affine group
+\[
+\text{Aff}_n(\K) = \left\{\mattwo{A}{0}{V}{1} : A \in \GL{n}{\K}, V \in \K^n \right\}
+\]
+\begin{enumerate}
+  \item Is a subgroup of $\GL{n+1}{\K}$
+  \item Prove that $f(X) := R_A(X) + V$ sends translated lines to translated lines
+\end{enumerate}
 \end{taggedexercise}
 
-%\textcolor{red}{TODO}
+\begin{solution}
+  (1). First, note that
+  \[
+  \mattwo{A_1}{0}{V_1}{1} \cdot \mattwo{A_2}{0}{V_2}{1} = \mattwo{A_1 \cdot A_2}{0}{R_{A_2}(V_1) + V_2}{1} 
+  \]
+  so $\text{Aff}_n(\K)$ is closed.
+  Next, 
+  \[\mattwo{A}{0}{V}{1} \cdot \mattwo{A^{-1}}{0}{ - R_{A^{-1}}(V)}{1} = \mattwo{AA^{-1}}{0}{R_{A^{-1}}(V) - R_{A^{-1}}(V)}{1} = \mattwo{I}{0}{0}{1}\]
+  hence $\text{Aff}_n(\K)$ is a subgroup.
+
+  (2). This is trivial since $\text{Aff}_n(\K)$ is a subgroup.
+\end{solution}
+
 % Exercise 3.12
-\begin{taggedexercise}[\textcolor{red}{TODO}]
-
+\begin{taggedexercise}[\textcolor{green}{Complete}]
+Is $\text{Aff}_1(\R)$ abelian?
 \end{taggedexercise}
 
-%\textcolor{red}{TODO}
+\begin{solution}
+Think of $\text{Aff}_1(\R)$ as maps $f_{\lambda, V}(X) = \lambda X + V$.
+Then
+\[\begin{aligned}
+  f_{\lambda_2, V_2} \circ f_{\lambda_1, V_1}(X) &= f_{\lambda_2, V_2}(\lambda_1 X + V_1) \\
+                                                 &= \lambda_2 \lambda_1 X + \lambda_2 V_1 + V_2
+\end{aligned}\]
+\[\begin{aligned}
+  f_{\lambda_1, V_1} \circ f_{\lambda_2, V_2}(X) &= f_{\lambda_1, V_1}(\lambda_2 X + V_2) \\
+                                                 &= \lambda_1 \lambda_2 X + \lambda_1 V_2 + V_1
+\end{aligned}\]
+which are equal if and only if $\lambda_1 = \lambda_2 = 1$, hence elements in $\text{Aff}_1(\R)$ do not commute in general, so $\text{Aff}_1(\R)$ is not abelian.
+\end{solution}
+
+% Exercise 3.13
+\begin{taggedexercise}[\textcolor{green}{Complete}]
+Let 
+\[
+A = \begin{bmatrix}
+  0 & 0 & 0 & 1 \\
+  1 & 0 & 0 & 0 \\
+  0 & 1 & 0 & 0 \\
+  0 & 0 & 1 & 0
+  \end{bmatrix}
+\]
+\begin{enumerate}
+  \item Calculate $R_A(x,y,z,w)$.
+  \item Define a subgroup $H$ of $O(4)$ that is isomorphic to $S_4$.
+  \item Describe a subgroup $H$ of $O(n)$ that is isomorphic to $S_n$. What is $H \cap SO(n)$?
+  \item Prove that every finite group is a subgroup of $O(n)$ for some $n$.
+\end{enumerate}
+\end{taggedexercise}
+
+\begin{solution}
+  (1). 
+  \[
+  R_A(x,y,z,w) = (x,y,z,w) \cdot \begin{bmatrix}
+    0 & 0 & 0 & 1 \\
+    1 & 0 & 0 & 0 \\
+    0 & 1 & 0 & 0 \\
+    0 & 0 & 1 & 0
+    \end{bmatrix} = (y, z, w, x).
+  \]
+
+  (2). Let $\{e_1, e_2, e_3, e_4\}$ be the standard basis of $\R^4$ and $\sigma \in S_4$ a permutation on $4$ charachters.
+  Then define a map $f : S_n \to O(4)$ via
+
+  \[f(\sigma) := 
+  \begin{bmatrix}
+  | & | & | & | \\
+  e_{\sigma(1)} & e_{\sigma(2)} & e_{\sigma(3)} & e_{\sigma(4)} \\
+  | & | & | & |
+  \end{bmatrix}.
+  \]
+  Then,
+  \[
+  \begin{aligned}
+    f(\sigma_1 \circ \sigma_2) &= 
+  \begin{bmatrix}
+  | & | & | & | \\
+  e_{\sigma_1 \circ \sigma_2(1)} & e_{\sigma_1 \circ \sigma_2(2)} & e_{\sigma_1 \circ \sigma_2(3)} & e_{\sigma_1 \circ \sigma_2(4)} \\
+  | & | & | & |
+  \end{bmatrix} \\
+  &= \begin{bmatrix}
+    | & | & | & | \\
+    e_{\sigma_1(1)} & e_{\sigma_1(2)} & e_{\sigma_1(3)} & e_{\sigma_1(4)} \\
+    | & | & | & |
+    \end{bmatrix} \cdot
+    \begin{bmatrix}
+      | & | & | & | \\
+      e_{\sigma_2(1)} & e_{\sigma_2(2)} & e_{\sigma_2(3)} & e_{\sigma_2(4)} \\
+      | & | & | & |
+      \end{bmatrix} \\
+  &= f(\sigma_1) \circ f(\sigma_2)
+  \end{aligned}
+  \]
+  Hence $f$ is a group homomorphism.
+  Note that $\ker{f}$ is trivial, so $H = \text{Image} f \approxeq S_4$ is a subgroup of $O(4)$.
+
+  (3). Let $\{e_1, \dots, e_n\}$ be the standard basis of $\R^n$ and $\sigma \in S_n$ a permutation on $n$ charachters.
+  Then define a map $f : S_n \to O(n)$ via
+
+  \[f(\sigma) := 
+  \begin{bmatrix}
+  | & | &  & | & |\\
+  e_{\sigma(1)} & e_{\sigma(2)} & \cdots & e_{\sigma(3)} & e_{\sigma(4)} \\
+  | & | &  & | & |
+  \end{bmatrix}.
+  \]
+  Let $H = \text{image} f \approxeq S_n$, which is a subgroup of $O(n)$ generalizing the logic from step (2).
+  Consider the diagram
+  \[\begin{tikzcd}
+	{S_n} &&& {O(n)} \\
+	\\
+	&&& {\{\pm 1\}}
+	\arrow["f", from=1-1, to=1-4]
+	\arrow["{\text{sgn}}"', from=1-1, to=3-4]
+	\arrow["\det", from=1-4, to=3-4]
+\end{tikzcd}\]
+  $f, \text{sgn}$, and $\det$ are all group homomorphisms (where the operation in $\{\pm 1\}$ is multiplication), hence the diagram must commute.
+  Therefore $H \cap SO(n)$ is the permutation matrices in $H$ corresponding to permutations with positive sign in the pre-image of $f$.
+
+  (4). By Cayley's Theorem for finite groups $G$, $G \leq H \leq O(n)$, and since subgroups of subgroups are subgroups, $G \leq O(n)$. 
+
+\end{solution}
+
+
 % Exercise 3.14
-\begin{taggedexercise}[\textcolor{red}{TODO}]
-
+\begin{taggedexercise}[\textcolor{green}{Complete}]
+Let $\mathfrak{g}$ be a $\K-$subspace of $\K^n$, with dimension $d$.
+Let $\beta = \{X_1, \dots, X_d\}$ be an orthonormal basis of $\mathfrak{g}$.
+Let $f: \mathfrak{g} \to \mathfrak{g}$ be $\K-$linear.
+Let $A \in M_d(\K)$ represent $f$ over the basis $\beta$.
+Prove that the following are equivalent:
+\begin{enumerate}
+  \item $A \in O_d(\K)$
+  \item $\langle f(X), f(Y) \rangle = \langle X, Y \rangle$ for all $X, Y \in \mathfrak{g}$.
+\end{enumerate}
+Show by example that this is false when $\beta$ is not orthogonormal.
 \end{taggedexercise}
 
-%\textcolor{red}{TODO}
-% Exercise 3.15
-\begin{taggedexercise}[\textcolor{red}{TODO}]
+\begin{solution}
+  ((1) $\implies$ (2)). Let $A \in O_d(\K)$.
+  Then for any $X, Y \in \mathfrak{g}$, 
+  \[
+  \begin{aligned}
+    \langle f(X), f(Y) \rangle &= \langle R_A(X), R_A(Y) \rangle \\
+                               &= \langle X \cdot A, Y \cdot A \rangle \\
+                               &= \langle X, Y \rangle
+  \end{aligned}
+  \]
+  by the definition of $O_d(\K)$.
 
-\end{taggedexercise}
+  ((2) $\implies$ (1)). Let $\langle f(X), f(Y) \rangle = \langle X, Y \rangle$ for all $X, Y \in \mathfrak{g}$.
+  Then for any $X_i, X_j \in \beta$,
+  \[\begin{aligned}
+    \langle f(X_i), f(X_j) \rangle &= \langle X_i, X_j \rangle \\
+                                   &= \delta_{ij}
+  \end{aligned}\]
+  Thus, representing $f$ as $A$ must be done in a way so that $A$ is invariant under the inner product.
+  In other words, $A \in O_d(\K)$.
+  Hence, (1) $\iff$ (2).
 
-%\textcolor{red}{TODO}
+  Say that $\beta = \{1,2\mathbf{i}\}$ is a basis of $\C$.
+  Then let $f(z) = ze^{\mathbf{i}\pi/2}$, hence $A \in U(1) \approxeq O_2(\R)$.
+  Then,
+  \[
+  \begin{aligned}
+    \langle f(1), f(2\mathbf{i}) \rangle &=  \langle e^{\mathbf{i} \pi/2}, 2\mathbf{i}e^{\mathbf{i}\pi/2} \rangle \\
+                                         &= \langle \mathbf{i}, -2 \rangle \\
+                                         &= -2\mathbf{i} \\
+                                         &\neq 2\mathbf{i} \\
+                                         &= \langle 1, 2\mathbf{i} \rangle
+  \end{aligned}
+  \]
+
+
+
+\end{solution}
+
 % Exercise 3.15
-\begin{taggedexercise}[\textcolor{red}{TODO}]
+\begin{taggedexercise}[\textcolor{green}{Complete}]
   Prove that the symmetries of the tetrahedron form the group $S_4$ and the proper symmetries form the group $A_4$.
 \end{taggedexercise}
+
 \begin{solution}
+  Fix a vertex $v \in \{v_1, v_2, v_3, v_4\}$ of the tetrahedron.
+  Consider the symmetries of the face opposite to $v$, which consist of $3$ rotational symmetries and $3$ flips. 
+  Hence there are $4 \cdot (3 + 3) = 4!$ elements.
+  Since clearly the symmetries act on the set $\{v_1, v_2, v_3, v_4\}$, and there are $4!$ distinct actions, the symmetries of the tetrahedron must be isomorphic to $S_4$.
+
+  Exactly $1/2$ of the elements are the rotational symmetries described above, which are orientation preserving.
+  There are $4!/2$ of these, corresponding directly the subgroup $A_4$.
 
 \end{solution}
 
@@ -1073,11 +1437,26 @@ Which can be applied to the above question to derive a simple answer.
   where $?$ is an interesting map which maps both connected components of $\Ogroup{4}$ to the corresponding connected components of $\Ogroup{3}$.
 \end{solution}
 
-%\textcolor{red}{TODO}
 % Exercise 3.18
-\begin{taggedexercise}[\textcolor{red}{TODO}]
-
+\begin{taggedexercise}[\textcolor{yellow}{WIP}]
+(Gram-Schmidt). For $m < n$, and $S = \{v_1, \dots , v_m\} \subset \K^n$ an orthonormal set, show that 
+\begin{enumerate}
+  \item There exist vectors $v_{m+1}, \dots , v_n$ that form $\{v_1 , \dots , v_n\}$ into an orthonormal basis of $\K^n$.
+\end{enumerate}
 \end{taggedexercise}
+
+\begin{solution}
+  (1). Let $v_i, v_j \in S$, and let $x$ be a vector not in the span of $S$.
+  Then, let
+  \[
+  w = x - \sum_{i=1}^m \langle x, v_i \rangle v_i
+  \]
+  which is orthogonal to all the vectors in $S$, hence $S \cup \{\frac{w}{||w||}\}$ is an orthonormal set.
+  Inducting gives the result.
+
+  (2). 
+
+\end{solution}
 
 
 
@@ -1108,11 +1487,29 @@ Placeholder for your solution.
 
 \end{taggedexercise}
 
-%\textcolor{red}{TODO}
 % Exercise 5.2
-\begin{taggedexercise}[\textcolor{red}{TODO}]
-
+\begin{taggedexercise}[\textcolor{green}{Complete}]
+  Verify $\alpha'(0) = A$ in the proof of Theorem 5.9.
 \end{taggedexercise}
+
+\begin{solution}
+  Note that 
+  \[\gamma(t) := I +tA\]
+  where $A \in M_n(\K)$ has trace $0$.
+  Then $\alpha(t)_{ij} = \gamma(t)_{ij}$ for all $i,j$, except when $i = 0$, in which case
+  \[\alpha(t)_{0j} = \frac{\gamma(t)}{\det \gamma(t)}\]
+  Therefore, 
+  \[
+  \begin{aligned}
+    \alpha'(0)_{0j} &= \frac{d}{dt}_{t=0} \frac{\gamma(t)_{0j}}{\det \gamma(t)} \\
+                    &= \frac{d}{dt}_{t=0} \gamma(t)_{0j} \cdot (\det \gamma(t))^{-1} \\
+                    &= \gamma'(0)_{0j} \cdot (\det \gamma(0))^{-1} - \gamma(0)_{0j}\cdot (\det \gamma(0))^{-1} \cdot (\det \gamma'(0)) \cdot (\det \gamma(0))^{-1} \\
+                    &= \gamma'(0)_{0j} - \gamma(0)_{ij}\cdot \text{trace} (\gamma '(0)) \\
+                    &= \gamma'(0)_{0j}
+  \end{aligned}
+  \]
+  hence, $\alpha '(0) = A$, since all other entries are obviously equivalent.
+\end{solution}
 
 %\textcolor{red}{TODO}
 % Exercise 5.3
@@ -1126,28 +1523,53 @@ Placeholder for your solution.
 
 \end{taggedexercise}
 
-%\textcolor{red}{TODO}
+
 % Exercise 5.5
-\begin{taggedexercise}[\textcolor{red}{TODO}]
-
+\begin{taggedexercise}[\textcolor{green}{Complete}]
+Describe the Lie algebra of the Affine group.
 \end{taggedexercise}
 
-%\textcolor{red}{TODO}
+\begin{solution}
+  Consider the path 
+  \[
+  \gamma(t) = \mattwo{A(t)}{0}{V(t)}{1}
+  \]
+  then,
+  \[
+  \frac{d}{dt}_{t=0} \gamma(t) = \mattwo{A'(0)}{0}{V'(0)}{0} = \mattwo{T}{0}{v}{0}
+  \]
+  with $T \in gl_n(\K)$ and $v \in \K^n$.
+  So, the Lie algebra of the Affine group is isomorphic to $gl_n(\K) \oplus \R^n$ as a vector space.
+\end{solution}
+
 % Exercise 5.6
-\begin{taggedexercise}[\textcolor{red}{TODO}]
-
+\begin{taggedexercise}[\textcolor{green}{Complete}]
+Describe the Lie algebra of $\text{Isom}(\R^n)$.
 \end{taggedexercise}
 
-%\textcolor{red}{TODO}
+\begin{solution}
+  Using the same technique as Exercise 5.6, the Lie algebra is isomorphic to $o_n(\R) \oplus \R^n$.
+\end{solution}
+
 % Exercise 5.7
-\begin{taggedexercise}[\textcolor{red}{TODO}]
-
+\begin{taggedexercise}[\textcolor{green}{Complete}]
+  Describe the Lie algebra of $UT_n(\K)$.
 \end{taggedexercise}
+
+\begin{solution}
+  Let $\gamma(t)$ be given as follows.
+  First, $\gamma$ is given by the matrix
+  \[(\gamma(t))_{ij} = a_{ij}(t).\]
+  If $i < j$, then $a_{ij}(t) = 0$.
+  If $i > j$, then $a_{ij}(0) = 0$.
+  If $i = j$, then $a_{ij}(0) = 1$.
+  Hence, the Lie algebra is again $UT_n(\K)$.
+\end{solution}
 
 %\textcolor{red}{TODO}
 % Exercise 5.8
 \begin{taggedexercise}[\textcolor{red}{TODO}]
-
+  Describe the Lie algebra 
 \end{taggedexercise}
 
 %\textcolor{red}{TODO}
@@ -1180,10 +1602,9 @@ Placeholder for your solution.
 
 \end{taggedexercise}
 
-%\textcolor{red}{TODO}
 % Exercise 5.14
 \begin{taggedexercise}[\textcolor{red}{TODO}]
-
+  Describe the Lie algebra of $SL_n(\HH)$.
 \end{taggedexercise}
 
 %\textcolor{red}{TODO}
@@ -1463,23 +1884,56 @@ Let $C_l = \sum_{k=0}^l A_kB_{l-k}$. Prove that
   Repeat the previous problem with $A = \mattwo{a}{b}{b}{a}$
 \end{taggedexercise}
 
-% \textcolor{red}{TODO}
 % Exercise 6.11
-\begin{taggedexercise}[\textcolor{red}{TODO}]
-  
+\begin{taggedexercise}[\textcolor{green}{Complete}]
+  When $A$ is in the Lie algebra of $UT_n(\K)$, prove that $e^A \in UT_n(\K)$.
 \end{taggedexercise}
 
-% \textcolor{red}{TODO}
+\begin{solution}
+  Let $A_1, A_2 \in UT_n(\K)$ and $k$ a positive integer.
+  Then clearly $A_1 + A_2$ and $R_{A_1}(A_2)$ are in $UT_n(\K)$.
+  Thus, for any positive integer $k \in \Z$, $A^k \in UT_n(\K)$.
+  Further, $\frac{1}{k!}A_1$ is certainly in $UT_n(\K)$.
+  Hence, we can assert that 
+  \[
+  e^A = \sum_{k=0}^\infty \frac{A^k}{k!} \in UT_n(\K).
+  \]
+\end{solution}
+
+
 % Exercise 6.12
-\begin{taggedexercise}[\textcolor{red}{TODO}]
-  
+\begin{taggedexercise}[\textcolor{green}{Complete}]
+  When $A$ is in the Lie algebra of $\text{Isom}(\R^n)$, prove that $e^A \in \text{Isom}(\R^n)$.
 \end{taggedexercise}
 
-% \textcolor{red}{TODO}
+\begin{solution}
+  Let $A_1, A_2 \in \text{Isom}(\R^n)$ and $k$ a positive integer.
+  Then $A_1 + A_2$ and $R_{A_1}(A_2)$ are isometries.
+  Thus, for any positive integer $k \in \Z$, $A^k$ is an isometry.
+  Further, $\frac{1}{k!}A_1$ is an isometry.
+  Hence, we can assert that 
+  \[
+  e^A = \sum_{k=0}^\infty \frac{A^k}{k!} \in \text{Isom}(\R^n).
+  \]
+\end{solution}
+
+
 % Exercise 6.13
-\begin{taggedexercise}[\textcolor{red}{TODO}]
-  
+\begin{taggedexercise}[\textcolor{green}{Complete}]
+  Describe the one-parameter groups of $\text{Trans}(\R^n)$.
 \end{taggedexercise}
+
+\begin{solution}
+  Fix $A = \mattwo{I}{0}{X}{1} \in \text{Trans}(\R^n)$.
+  Then it is clear that 
+  \[A^k = \mattwo{I}{0}{X}{1}^k = \mattwo{I}{0}{kX}{1}\]
+  hence,
+  \[\begin{aligned}
+    e^{tA} &= \sum_{k=0}^\infty \frac{(tA)^k}{k!} \\
+        &= \sum_{k=0}^\infty \frac{t^k}{k!}\mattwo{I}{0}{kX}{1} \\
+        &= e^t\mattwo{I}{0}{tX}{1}.
+  \end{aligned}\]
+\end{solution}
 
 % \textcolor{red}{TODO}
 % Exercise 6.14
@@ -1574,26 +2028,131 @@ Let $C_l = \sum_{k=0}^l A_kB_{l-k}$. Prove that
 \section{Exercises}
 
 % Exercise 8.1
-\begin{taggedexercise}[\textcolor{red}{TODO}]
-Another exercise goes here.
+\begin{taggedexercise}[\textcolor{green}{Complete}]
+Prove that $\SO{3}$ is not abelian in two ways:
+\begin{enumerate}
+  \item Find two elements in $\so{3}$ that do not commute.
+  \item Find two elements in $\SO{3}$ that do not commute.
+\end{enumerate}
+Which is easier? 
+Prove that $\SO{n}$ is not abelian for $n > 2$.
 \end{taggedexercise}
 
+\begin{solution}
+  (1). Consider the basis given for $\so{3}$ in Theorem 5.12, that is
+  \[\so{3} = \text{span} \left\{
+    E_1 = \begin{bmatrix}
+      0 & 0 & 0 \\
+      0 & 0 & -1 \\
+      0 & 1 & 0
+      \end{bmatrix}, 
+    E_2 = \begin{bmatrix}
+      0 & 0 & 1 \\
+      0 & 0 & 0 \\
+      -1 & 0 & 0
+      \end{bmatrix},
+    E_3 = \begin{bmatrix}
+      0 & -1 & 0 \\
+      1 & 0 & 0 \\
+      0 & 0 & 0
+      \end{bmatrix} \right\}\]
+  then we have 
+  \[[E_1, E_2] = E_3\]
+  hence $E_1$ and $E_2$ do not commute.
+
+  (2). Let
+  \[
+    R_z(\theta) =
+    \begin{bmatrix}
+    \cos\theta & -\sin\theta & 0 \\
+    \sin\theta & \cos\theta & 0 \\
+    0 & 0 & 1
+    \end{bmatrix}
+  \]
+  and 
+  \[
+    R_x(\phi) =
+    \begin{bmatrix}
+    1 & 0 & 0 \\
+    0 & \cos\phi & -\sin\phi \\
+    0 & \sin\phi & \cos\phi
+    \end{bmatrix}
+  \]
+  then 
+  \[
+    R_z(\theta) R_x(\phi) =
+    \begin{bmatrix}
+    \cos\theta & -\sin\theta\cos\phi & \sin\theta\sin\phi \\
+    \sin\theta & \cos\theta\cos\phi & -\cos\theta\sin\phi \\
+    0 & \sin\phi & \cos\phi
+    \end{bmatrix}
+  \]
+  but 
+  \[
+    R_x(\phi) R_z(\theta) =
+    \begin{bmatrix}
+    \cos\theta & -\sin\theta & 0 \\
+    \sin\theta\cos\phi & \cos\theta\cos\phi & -\sin\phi \\
+    \sin\theta\sin\phi & \cos\theta\sin\phi & \cos\phi
+    \end{bmatrix}
+  \]
+  hence $\SO(3)$ is not abelian.
+
+  to prove $SO(n)$ is not abelian for $n > 2$, consider the basis $\{E_1, \dots E_n\}$ as described in Theorem 5.2.
+  Then if $n >2$, we have that 
+  \[[E_i, E_j] = E_k\]
+  for some $i \neq j \neq k$, hence $\so{n}$ is not abelian, and so $SO(3)$ is not abelian.
+
+\end{solution}
+
 % Exercise 8.2
-\begin{taggedexercise}[\textcolor{red}{TODO}]
+\begin{taggedexercise}[\textcolor{red}{Complete}]
   Let $G_1, G_2$ be matrix groups with Lie algebras $\mathfrak{g}_1, \mathfrak{g_2}$.
   Suppose that $f: G_1 \to G_2$ is a smooth homomorphism.
   If $df_I : \mathfrak{g}_1 \to \mathfrak{g}_2$ is bijective, prove that $df_g : T_gG_1 \to T_{f(g)}G_2$ is bijective for all $g \in G_1$.
 \end{taggedexercise}
 
 \begin{solution}
-  Let $a(0) = b(0) = I_{G_1}$ with $a'(0) = A, b'(0) = B$ for some $A, B \in \mathfrak{g_1}$.
+  Given a group $G$ with $g \in G$, let $L_g : G \to G$ be the left-multiplication map $L_g(G) := gG$.
+  Then $L_g$ is a group automomorphism.
+  It is straightforward to show that
+  \[df_g = d\left(L_{f(g)}\right) \circ df_I \circ d\left( L^{-1}_g \right).\]
+  where the composition
+  \[\begin{tikzcd}
+	{T_gG_1} && {\mathfrak{g}_1} && {\mathfrak{g}_1} && {T_{f(g)}G_2}
+	\arrow["{d(L^{-1}_g)}", from=1-1, to=1-3]
+	\arrow["{df_I}", from=1-3, to=1-5]
+	\arrow["{d(L_{f(g)})}", from=1-5, to=1-7]
+\end{tikzcd}\]
+  is a composition of linear maps, and hence linear, and hence bijective.
 
 \end{solution}
 
 % Exercise 8.3
-\begin{taggedexercise}[\textcolor{red}{TODO}]
-  Another exercise goes here.
+\begin{taggedexercise}[\textcolor{yellow}{WIP}]
+  Define $d: \Sp{1} \to \Sp{1} \times \Sp{1}$ as $d(a) := (a, a)$.
+  Explicitly describe the function $\iota : \SO{3} \to \SO{4}$ that makes the following diagram commute:
+  \[\begin{tikzcd}
+	{\Sp{1}} && {\Sp{1} \times \Sp{1}} \\
+	\\
+	{\SO{3}} && {\SO{4}}
+	\arrow["d", from=1-1, to=1-3]
+	\arrow["{\text{Ad}}"', from=1-1, to=3-1]
+	\arrow["F", from=1-3, to=3-3]
+	\arrow["\iota"', from=3-1, to=3-3]
+\end{tikzcd}\]
 \end{taggedexercise}
+
+\begin{solution}
+  Fix $(a,a) \in \Sp{1} \times \Sp{1}$.
+  If $v \in \HH$ is purely imaginary, then $F$ is exactly the action $\text{Ad}_a$.
+  If $v$ is real, then $F(a,a)(v) = v$, hence the real axis is fixed pointwise when viewing $F$ as acting on $\R^4$.
+  Therefore, given $M \in \SO{3}$ where $M$ coincides with the action of $\text{Ad}_a$, $\iota$ is the inclusion 
+  \[\iota(M) = \mattwo{1}{0}{0}{M}\]
+
+
+
+\end{solution}
 
 % Exercise 8.4
 \begin{taggedexercise}[\textcolor{red}{TODO}]
@@ -1602,8 +2161,10 @@ Another exercise goes here.
 
 % Exercise 8.5
 \begin{taggedexercise}[\textcolor{red}{TODO}]
-  Another exercise goes here.
 \end{taggedexercise}
+
+\begin{solution}
+\end{solution}
 
 % Exercise 8.6
 \begin{taggedexercise}[\textcolor{red}{TODO}]
